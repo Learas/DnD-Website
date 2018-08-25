@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+
+<p id="CSS">2</p>
+<p id="CSTS">3</p>
+
+
+
+<p id="gCSTS">8</p>
+<p id="gCSTD">9</p>
+
+<script>
+
+var CharacterStats = {
+    Strength: 7,
+    Dexterity: 10,
+    Constitution: 19,
+    Wisdom: 7,
+    Inteligence: 8,
+    Charisma: 13,
+};
+
+var CharacterSavingThrows = {
+    Strength: 0,
+    Dexterity: 0,
+    Constitution: 0,
+    Wisdom: 0,
+    Inteligence: 0,
+    Charisma: 0,
+};
+
+document.getElementById("CSS").innerHTML = CharacterStats.Strength;
+document.getElementById("CSTS").innerHTML = CharacterSavingThrows.Strength;
+
+
+function getCharacterSavingThrowsStrength() {
+   var i;
+ 
+    for (i=0; i = CharacterStats.Strength; i++){
+    if (CharacterStats.Strength === i) {
+    CharacterSavingThrows.Strength = Math.floor((i-10)/2);
+    return CharacterSavingThrows.Strength;
+};
+};
+    
+};
+
+
+    function getCharacterSavingThrowsDexterity() {
+   var i;
+    for (i=0; i = CharacterStats.Dexterity; i++){
+    if (CharacterStats.Dexterity === i) {
+    CharacterSavingThrows.Dexterity = Math.floor((i-10)/2); 
+    return CharacterSavingThrows.Dexterity; 
+
+
+  /*  } else
+    if (CharacterStats.Strength === 12 || CharacterStats.Strength === 13) {
+    CharacterSavingThrows.Strength = 1;
+    } else if (CharacterStats.Strength === 14 || CharacterStats.Strength === 15) {
+    CharacterSavingThrows.Strength = 2;*/
+   // return CharacterSavingThrows.Strength; 
+  
+    };
+};
+//document.getElementById("CSSS").innerHTML = CharacterStats.Strength;
+//document.getElementById("CSTSS").innerHTML = CharacterSavingThrows.Strength; 
+ 
+};
+
+
+document.getElementById("gCSTS").innerHTML = getCharacterSavingThrowsStrength();
+document.getElementById("gCSTD").innerHTML = getCharacterSavingThrowsDexterity();
+
+//document.getElementById("CSSSS").innerHTML = CharacterStats.Strength;
+//document.getElementById("CSTSSS").innerHTML = CharacterSavingThrows.Strength;
+
+</script>
+
+</body>
+</html>
