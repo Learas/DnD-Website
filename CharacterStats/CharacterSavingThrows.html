@@ -5,22 +5,27 @@
 <h2>JavaScript Objects</h2>
 
 
-<p id="CSS">2</p>
-<p id="CSTS">3</p>
+<p id="CSStr">2</p>
+<p id="CSTStr">3</p>
 
 
 
-<p id="gCSTS">8</p>
-<p id="gCSTD">9</p>
+<p id="gCSTStr">8</p>
+<p id="gCSTDex">9</p>
+<p id="gCSTCon">10</p>
+<p id="gCSTInt">11</p>
+<p id="gCSTWis">12</p>
+<p id="gCSTChar">13</p>
+
 
 <script>
 
 var CharacterStats = {
-    Strength: 7,
+    Strength: 14,
     Dexterity: 10,
     Constitution: 19,
+    Intelligence: 8,
     Wisdom: 7,
-    Inteligence: 8,
     Charisma: 13,
 };
 
@@ -28,13 +33,13 @@ var CharacterSavingThrows = {
     Strength: 0,
     Dexterity: 0,
     Constitution: 0,
+    Intelligence: 0,
     Wisdom: 0,
-    Inteligence: 0,
     Charisma: 0,
 };
 
-document.getElementById("CSS").innerHTML = CharacterStats.Strength;
-document.getElementById("CSTS").innerHTML = CharacterSavingThrows.Strength;
+document.getElementById("CSStr").innerHTML = CharacterStats.Strength;
+document.getElementById("CSTStr").innerHTML = CharacterSavingThrows.Strength;
 
 
 function getCharacterSavingThrowsStrength() {
@@ -73,8 +78,58 @@ function getCharacterSavingThrowsStrength() {
 };
 
 
-document.getElementById("gCSTS").innerHTML = getCharacterSavingThrowsStrength();
-document.getElementById("gCSTD").innerHTML = getCharacterSavingThrowsDexterity();
+function getCharacterSavingThrowsConstitution() {
+   var i;
+ 
+    for (i=0; i = CharacterStats.Constitution; i++){
+    if (CharacterStats.Constitution === i) {
+    CharacterSavingThrows.Constitution = Math.floor((i-10)/2);
+    return CharacterSavingThrows.Constitution;
+};
+};
+};
+
+function getCharacterSavingThrowsWisdom() {
+   var i;
+ 
+    for (i=0; i = CharacterStats.Wisdom; i++){
+    if (CharacterStats.Wisdom === i) {
+    CharacterSavingThrows.Wisdom = Math.floor((i-10)/2);
+    return CharacterSavingThrows.Wisdom;
+};
+};
+};
+
+function getCharacterSavingThrowsIntelligence() {
+   var i;
+ 
+    for (i=0; i = CharacterStats.Intelligence; i++){
+    if (CharacterStats.Intelligence === i) {
+    CharacterSavingThrows.Intelligence = Math.floor((i-10)/2);
+    return CharacterSavingThrows.Intelligence;
+};
+};
+};
+
+function getCharacterSavingThrowsCharisma() {
+   var i;
+ 
+    for (i=0; i = CharacterStats.Charisma; i++){
+    if (CharacterStats.Charisma === i) {
+    CharacterSavingThrows.Charisma = Math.floor((i-10)/2);
+    return CharacterSavingThrows.Charisma;
+};
+};
+};
+
+document.getElementById("gCSTStr").innerHTML = getCharacterSavingThrowsStrength();
+document.getElementById("gCSTDex").innerHTML = getCharacterSavingThrowsDexterity();
+document.getElementById("gCSTCon").innerHTML = getCharacterSavingThrowsConstitution();
+document.getElementById("gCSTInt").innerHTML = getCharacterSavingThrowsIntelligence();
+document.getElementById("gCSTWis").innerHTML = getCharacterSavingThrowsWisdom();
+document.getElementById("gCSTChar").innerHTML = getCharacterSavingThrowsCharisma();
+
+
 
 //document.getElementById("CSSSS").innerHTML = CharacterStats.Strength;
 //document.getElementById("CSTSSS").innerHTML = CharacterSavingThrows.Strength;
