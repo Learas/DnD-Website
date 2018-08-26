@@ -147,3 +147,16 @@ var CharacterSheet = {
 
     Resistances: "",
 };
+
+
+var ChracterClass = {
+    Name: "",
+    HitDie: "",
+    SavingThrowsProficiency: "",
+    ArmorProfiviency: "",
+    WeaponProficiency: "",
+    Tools: "",
+    Skills: "",
+}
+
+var 
