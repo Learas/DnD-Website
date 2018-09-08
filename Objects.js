@@ -1,15 +1,14 @@
-//Objexts
+// Objexts
 
-var CharacterSheet = {
-    Player: "",
-    
+const CharacterSheet = {
+    Player: '',
     
     CharacterDetails: {
-        Name: "",
+        Name: '',
         Race: {
-            Name: "",
+            Name: '',
             Speed: 0,
-            Size: "",
+            Size: '',
             RacialModifier: {
                 Strength: 0,
                 Dexterity: 0,
@@ -17,34 +16,34 @@ var CharacterSheet = {
                 Intelligence: 0,
                 Wisdom: 0,
                 Charisma: 0,
-                Languages: "",
-            }
+                Languages: '',
+            },
         },
 
         Class: {
-            Name: "",
+            Name: '',
             HitDice: 0,
-            ArmorProficiency: "",
-            WeaponProficiency: "",
-            Saves: "",
+            ArmorProficiency: '',
+            WeaponProficiency: '',
+            Saves: '',
         },
 
-        Background: "",
-        Feature: "",
+        Background: '',
+        Feature: '',
 
-        Alignment: "",
+        Alignment: '',
         
         Appearance: {
-            Gender: "",
+            Gender: '',
             Age: 0,
 
             Height: 0,
             Weight: 0,
-            Eyes: "",
-            Hair: "",
+            Eyes: '',
+            Hair: '',
         },
     
-        Vision: "",
+        Vision: '',
       
     },
 
@@ -61,7 +60,7 @@ var CharacterSheet = {
         Wisdom: 7,
         Charisma: 13,
     },
-
+    
     Initative: 0,
 
     AbilityModifier: {
@@ -93,29 +92,22 @@ var CharacterSheet = {
         Stealth: 0,
         Survival: 0,
     },
-
-
-
     
-    ProficientSkills: "",
+    ProficientSkills: '',
     PassivePerception: 10,
-
 
     // Armor Class, Armour Class
     AC: 0,
 
-    ArmorEquipped: "",
+    ArmorEquipped: '',
 
-
-    
-
-    //Hit Points
+    // Hit Points
     HP: {
         TotalHP: 0,
         CurrentHP: 0,
     },
 
-//Coins, Money, Gold
+    // Coins, Money, Gold
     Coins: {
         Platinum: 0,
         Gold: 0,
@@ -128,12 +120,12 @@ var CharacterSheet = {
 
     Attack: 1,
     
-    WeaponsEquipped: "",
+    WeaponsEquipped: '',
 
-    ItemsEquipped: "",
-    Tools: "",
+    ItemsEquipped: '',
+    Tools: '',
 
-    //Spells, Magic, Sorcery
+    // Spells, Magic, Sorcery
     SpellSlots: {
         Level1: 0,
         Level2: 0,
@@ -146,9 +138,9 @@ var CharacterSheet = {
         Level9: 0,
     },
 
-    AnimalFamiliar: "",
+    AnimalFamiliar: '',
 
-    Conditions: "",
+    Conditions: '',
 
-    Resistances: "",
+    Resistances: '',
 };
