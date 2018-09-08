@@ -94,6 +94,9 @@ var CharacterSheet = {
         Survival: 0,
     },
 
+
+
+    
     ProficientSkills: "",
     PassivePerception: 10,
 
@@ -103,6 +106,8 @@ var CharacterSheet = {
 
     ArmorEquipped: "",
 
+
+    
 
     //Hit Points
     HP: {

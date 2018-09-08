@@ -45,14 +45,18 @@ document.getElementById("CSTStr").innerHTML = CharacterSavingThrows.Strength;
 function getCharacterSavingThrowsStrength() {
    var i;
  
-    for (i=0; i = CharacterStats.Strength; i++){
-    if (CharacterStats.Strength === i) {
-    CharacterSavingThrows.Strength = Math.floor((i-10)/2);
-    return CharacterSavingThrows.Strength;
-};
-};
+    for (i=0; i = 14; i++){
+        console.log(i)
+        if (CharacterStats.Strength === i) {
+            CharacterSavingThrows.Strength = Math.floor((i-10)/2);
+            return CharacterSavingThrows.Strength;      
+        };
+    };
     
 };
+
+console.log(getCharacterSavingThrowsStrength())
+
 
 
     function getCharacterSavingThrowsDexterity() {
