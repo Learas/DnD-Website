@@ -1,147 +1,177 @@
+// Character Sheet
+
+// Standard Values
+
+// functions
+function CharacterDetails(characterName, CharacterSheetRace, CharacterSheetClass, Appearance) {
+    this.Name = characterName;
+    this.CharacterSheetRace = CharacterSheetRace;
+
+    this.CharacterSheetClass = CharacterSheetClass;
+
+    this.Background = '';
+    this.Feature = '';
+
+    this.Alignment = '';
+    
+    this.Appearance = Appearance,
+
+    this.Vision = '';
+}
+
+//CharacterDetails
+
+function CharacterSheetRace(RaceName, RaceSpeed, RaceSize, RacialModifier) {
+    this.RaceName = RaceName;
+    this.RaceSpeed = RaceSpeed;
+    this.RaceSize = RaceSize;
+    this.RacialModifier = RacialModifier;
+}
+
+function RacialModifier() {
+    this.RacialModifierStrength = 0;
+    this.RacialModifierDexterity = 0;
+    this.RacialModifierConstitution = 0;
+    this.RacialModifierIntelligence = 0;
+    this.RacialModifierWisdom = 0;
+    this.RacialModifierCharisma = 0;
+    this.RacialModifierLanguages = '';
+}
+
+function CharacterSheetClass() {
+    this.Name = '';
+    this.HitDice = 0;
+    this.ArmorProficiency = '';
+    this.WeaponProficiency = '';
+    this.Saves = '';  
+}
+
+function Appearance() {
+    this.Gender = '';
+    this.Age = 0;
+
+    this.Height = 0;
+    this.Weight = 0;
+    this.Eyes = '';
+    this.Hair = '';
+}
+
+//End CharacterDetails
+
+function AbilityScores() {
+    this.Strength = 14;
+    this.Dexterity = 10;
+    this.Constitution = 19;
+    this.Intelligence = 8;
+    this.Wisdom = 7;
+    this.Charisma = 13;
+}
+
+function AbilityModifier() {
+    this.Strength = 0;
+    this.Dexterity = 0;
+    this.Constitution = 0;
+    this.Intelligence = 0;
+    this.Wisdom = 0;
+    this.Charisma = 0;
+}
+
+function Skills() {
+    this.Acrobatics = 0;
+    this.AnimalHandling = 0;
+    this.Acrana = 0;
+    this.Athletics = 0;
+    this.Deception = 0;
+    this.History = 0;
+    this.Insight = 0;
+    this.Intimidation = 0;
+    this.Investigation = 0;
+    this.Medicine = 0;
+    this.Nature = 0;
+    this.Perception = 0;
+    this.Performance = 0;
+    this.Persuasion = 0;
+    this.Religion = 0;
+    this.SleightofHand = 0;
+    this.Stealth = 0;
+    this.Survival = 0;
+}
+
+function HP() {
+    this.TotalHP = 0;
+    this.CurrentHP = 0;
+}
+
+function Coins() {
+    this.Platinum = 0;
+    this.Gold = 0;
+    this.Electrum = 0;
+    this.Silver = 0;
+    this.Copper = 0;
+}
+
+function NumberSpellSlots() {
+    this.Level1 = 0;
+    this.Level2 = 0;
+    this.Level3 = 0;
+    this.Level4 = 0;
+    this.Level5 = 0;
+    this.Level6 = 0;
+    this.Level7 = 0;
+    this.Level8 = 0;
+    this.Level9 = 0;
+}
+
 // Objexts
 //Class Characters
 
-class CharacterSheet = {
-    this._Player = playerName,
+function CharacterSheet(playerName, CharacterDetails, Experience, Level, ProficiencyBonus, AbilityScores, Initative, AbilityModifier, Skills, ProficientSkills, PassivePerception, AC, ArmorEquipped, HP, Coins, CarryingCapacity, Attack, WeaponsEquipped, ItemsEquipped, Tools, NumberSpellSlots, AnimalFamiliar, Conditions, Resistances) {
+    this.Player = playerName;
     
-    this._CharacterDetails = {
-        this._Name = characterName,
-        this._Race = {
-            this._Name = '',
-            this._Speed = 0,
-            this._Size = '',
-            this._RacialModifier = {
-                this._Strength = 0,
-                this._Dexterity = 0,
-                this._Constitution = 0,
-                this._Intelligence = 0,
-                this._Wisdom = 0,
-                this._Charisma = 0,
-                this._Languages = '',
-            },
-        },
+    this.CharacterDetails = CharacterDetails;
 
-        this._Class = {
-            this._Name = '',
-            this._HitDice = 0,
-            this._ArmorProficiency = '',
-            this._WeaponProficiency = '',
-            this._Saves = '',
-        },
+    this.Experience = 0;
+    this.Level = 1;
 
-        this._Background = '',
-        this._Feature = '',
+    this.ProficiencyBonus = 1;
 
-        this._Alignment = '',
-        
-        this._Appearance = {
-            this._Gender = '',
-            this._Age = 0,
-
-            this._Height = 0,
-            this._Weight = 0,
-            this._Eyes = '',
-            this._Hair = '',
-        },
+    this.AbilityScores = AbilityScores;
     
-        this._Vision = '',
-      
-    },
+    this.Initative = 0;
 
-    this._Experience = 0,
-    this._Level = 1,
+    this.AbilityModifier = AbilityModifier;
 
-    this._ProficiencyBonus = 1,
-
-    this._AbilityScores = {
-        this._Strength = 14,
-        this._Dexterity = 10,
-        this._Constitution = 19,
-        this._Intelligence = 8,
-        this._Wisdom = 7,
-        this._Charisma = 13,
-    },
+    this.Skills = Skills;
     
-    this._Initative = 0,
+    this.ProficientSkills = '';
+    this.PassivePerception = 10;
 
-    this._AbilityModifier = {
-        this._Strength = 0,
-        this._Dexterity = 0,
-        this._Constitution = 0,
-        this._Intelligence = 0,
-        this._Wisdom = 0,
-        this._Charisma = 0,
-    },
+    // Armor Class; Armour Class
+    this.AC = 0;
 
-    this._Skills = {
-        this._Acrobatics = 0,
-        this._AnimalHandling = 0,
-        this._Acrana = 0,
-        this._Athletics = 0,
-        this._Deception = 0,
-        this._History = 0,
-        this._Insight = 0,
-        this._Intimidation = 0,
-        this._Investigation = 0,
-        this._Medicine = 0,
-        this._Nature = 0,
-        this._Perception = 0,
-        this._Performance = 0,
-        this._Persuasion = 0,
-        this._Religion = 0,
-        this._SleightofHand = 0,
-        this._Stealth = 0,
-        this._Survival = 0,
-    },
-    
-    this._ProficientSkills = '',
-    this._PassivePerception = 10,
-
-    // Armor Class, Armour Class
-    this._AC = 0,
-
-    this._ArmorEquipped = '',
+    this.ArmorEquipped = '';
 
     // Hit Points
-    this._HP = {
-        this._TotalHP = 0,
-        this._CurrentHP = 0,
-    },
+    this.HP = HP;
 
-    // Coins, Money, Gold
-    this._Coins = {
-        this._Platinum = 0,
-        this._Gold = 0,
-        this._Electrum = 0,
-        this._Silver = 0,
-        this._Copper = 0,
-    },
+    // Coins; Money; Gold
+    this.Coins = Coins;
 
-    this._CarryingCapacity = 0,
+    this.CarryingCapacity = 0;
 
-    this._Attack = 1,
+    this.Attack = 1;
     
-    this._WeaponsEquipped = '',
+    this.WeaponsEquipped = '';
 
-    this._ItemsEquipped = '',
-    this._Tools = '',
+    this.ItemsEquipped = '';
+    this.Tools = '';
 
-    // Spells, Magic, Sorcery
-    this._SpellSlots = {
-        this._Level1 = 0,
-        this._Level2 = 0,
-        this._Level3 = 0,
-        this._Level4 = 0,
-        this._Level5 = 0,
-        this._Level6 = 0,
-        this._Level7 = 0,
-        this._Level8 = 0,
-        this._Level9 = 0,
-    },
+    // Spells; Magic; Sorcery
+    this.NumberSpellSlots = NumberSpellSlots;
 
-    this._AnimalFamiliar = '',
+    this.AnimalFamiliar = '';
 
-    this._Conditions = '',
+    this.Conditions = '';
 
-    this._Resistances = '',
-};
+    this.Resistances = '';
+}
