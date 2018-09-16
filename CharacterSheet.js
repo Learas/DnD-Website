@@ -2,27 +2,30 @@
 
 // Standard Values
 
-
 // functions
-function CharacterDetails(characterName, CharacterSheetRace, CharacterSheetClass, Appearance) {
+function CharacterDetails(characterName) {
     this.Name = characterName;
-    this.CharacterSheetRace = CharacterSheetRace;
+    CharacterSheetRace.call(this, RacialModifier);
+    // this.CharacterSheetRace = CharacterSheetRace;
 
-    this.CharacterSheetClass = CharacterSheetClass;
+    // this.CharacterSheetClass = CharacterSheetClass;
+
+    CharacterSheetClass.call(this);
 
     this.Background = '';
     this.Feature = '';
 
     this.Alignment = '';
     
-    this.Appearance = Appearance,
+    // this.Appearance = Appearance,
+    Appearance.call(this);
 
     this.Vision = '';
 }
 
 // CharacterDetails
 
-function CharacterSheetRace(RaceName, RaceSpeed, RaceSize, RacialModifier) {
+function CharacterSheetRace(RaceName, RaceSpeed, RaceSize) {
     this.RaceName = RaceName;
     this.RaceSpeed = RaceSpeed;
     this.RaceSize = RaceSize;
@@ -126,7 +129,7 @@ function NumberSpellSlots() {
 // Objexts
 // Class Characters
 
-function CharacterSheet(playerName, CharacterDetails, Experience, Level, ProficiencyBonus, AbilityScores, Initative, AbilityModifier, Skills, ProficientSkills, PassivePerception, AC, ArmorEquipped, HP, Coins, CarryingCapacity, Attack, WeaponsEquipped, ItemsEquipped, Tools, NumberSpellSlots, AnimalFamiliar, Conditions, Resistances) {
+function CharacterSheet(playerName) {
     this.Player = playerName;
     
     this.CharacterDetails = CharacterDetails;
@@ -153,7 +156,9 @@ function CharacterSheet(playerName, CharacterDetails, Experience, Level, Profici
     this.ArmorEquipped = '';
 
     // Hit Points
-    this.HP = HP;
+    // this.HP = HP;
+
+    HP.call(this);
 
     // Coins; Money; Gold
     this.Coins = Coins;
