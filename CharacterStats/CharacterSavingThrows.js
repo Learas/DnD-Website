@@ -1,4 +1,5 @@
-// Working!!
+// Working!! 20.09.2018
+// Takes character stats and calculates the saving throws (bonus not included)
 // Names need to be changed
 
 const CharacterStats = {
