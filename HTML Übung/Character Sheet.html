@@ -11,6 +11,15 @@ html {
     box-sizing: border-box;
 }
 
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-1, .col-2,, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
 [class*="col-"] {
     float: left;
     padding: 10px;
@@ -62,8 +71,13 @@ div.stats {
 
 p.standard {
     text-align: center;
-    font-size: 0.75vw;
+    font-size: 0.7vw;
     margin-left: inherit;
+    word-wrap: break-word;
+}
+select {
+    width: 100%;
+    max-width: 40px !important
 }
 
 
@@ -86,15 +100,37 @@ p.standard {
 </header>
 
 <div class="row">
-<div class="col-1 menu">
 
- <!--  <div class="grayBackground">  -->   
+    <div class="col-1 menu">
+
+    <!--  <div class="grayBackground">  -->   
        <div class="stats">
            <p class="standard">
                 <b>Strength</b>
                 <br>
                 <br>
-                18
+                <select>
+                        <option value="Strenght01">1</option>
+                        <option value="Strenght02">2</option>
+                        <option value="Strenght03">3</option>
+                        <option value="Strenght04">4</option>
+                        <option value="Strenght05">5</option>
+                        <option value="Strenght06">6</option>
+                        <option value="Strenght07">7</option>
+                        <option value="Strenght08">8</option>
+                        <option value="Strenght09">9</option>
+                        <option value="Strenght10">10</option>
+                        <option value="Strenght11">11</option>
+                        <option value="Strenght12">12</option>
+                        <option value="Strenght13">13</option>
+                        <option value="Strenght14">14</option>
+                        <option value="Strenght15">15</option>
+                        <option value="Strenght16">16</option>
+                        <option value="Strenght17">17</option>
+                        <option value="Strenght18">18</option>
+                        <option value="Strenght19">19</option>
+                        <option value="Strenght20">20</option>
+                      </select>
                 <br>
            </p>
        </div> 
@@ -103,33 +139,96 @@ p.standard {
        <div class="stats">
            <p class="standard"> 
                <b>Dexterity </b>
-            <br>
-            <br>
-            16
-            <br>
+                <br>
+                <br>
+                <select>
+                        <option value="Dexterity01">1</option>
+                        <option value="Dexterity02">2</option>
+                        <option value="Dexterity03">3</option>
+                        <option value="Dexterity04">4</option>
+                        <option value="Dexterity05">5</option>
+                        <option value="Dexterity06">6</option>
+                        <option value="Dexterity07">7</option>
+                        <option value="Dexterity08">8</option>
+                        <option value="Dexterity09">9</option>
+                        <option value="Dexterity10">10</option>
+                        <option value="Dexterity11">11</option>
+                        <option value="Dexterity12">12</option>
+                        <option value="Dexterity13">13</option>
+                        <option value="Dexterity14">14</option>
+                        <option value="Dexterity15">15</option>
+                        <option value="Dexterity16">16</option>
+                        <option value="Dexterity17">17</option>
+                        <option value="Dexterity18">18</option>
+                        <option value="Dexterity19">19</option>
+                        <option value="Dexterity20">20</option>
+                      </select>
+                <br>
             </p>
        </div>
        <br>
 
        <div class="stats">
             <p class="standard"> 
-               <b> Constitution </b>
-             <br>
-             <br>
-             16
-             <br>
-             </p>
+                <b> Constitution </b>
+                <br>
+                <br>
+                <select>
+                        <option value="Constitution01">1</option>
+                        <option value="Constitution02">2</option>
+                        <option value="Constitution03">3</option>
+                        <option value="Constitution04">4</option>
+                        <option value="Constitution05">5</option>
+                        <option value="Constitution06">6</option>
+                        <option value="Constitution07">7</option>
+                        <option value="Constitution08">8</option>
+                        <option value="Constitution09">9</option>
+                        <option value="Constitution10">10</option>
+                        <option value="Constitution11">11</option>
+                        <option value="Constitution12">12</option>
+                        <option value="Constitution13">13</option>
+                        <option value="Constitution14">14</option>
+                        <option value="Constitution15">15</option>
+                        <option value="Constitution16">16</option>
+                        <option value="Constitution17">17</option>
+                        <option value="Constitution18">18</option>
+                        <option value="Constitution19">19</option>
+                        <option value="Constitution20">20</option>
+                      </select>
+                <br>
+            </p>
         </div>
         <br>
 
         <div class="stats">
                 <p class="standard"> 
                    <b> Intelligence </b>
-                 <br>
-                 <br>
-                 16
-                 <br>
-                 </p>
+                    <br>
+                    <br>
+                    <select>
+                            <option value="Intelligence01">1</option>
+                            <option value="Intelligence02">2</option>
+                            <option value="Intelligence03">3</option>
+                            <option value="Intelligence04">4</option>
+                            <option value="Intelligence05">5</option>
+                            <option value="Intelligence06">6</option>
+                            <option value="Intelligence07">7</option>
+                            <option value="Intelligence08">8</option>
+                            <option value="Intelligence09">9</option>
+                            <option value="Intelligence10">10</option>
+                            <option value="Intelligence11">11</option>
+                            <option value="Intelligence12">12</option>
+                            <option value="Intelligence13">13</option>
+                            <option value="Intelligence14">14</option>
+                            <option value="Intelligence15">15</option>
+                            <option value="Intelligence16">16</option>
+                            <option value="Intelligence17">17</option>
+                            <option value="Intelligence18">18</option>
+                            <option value="Intelligence19">19</option>
+                            <option value="Intelligence20">20</option>
+                          </select>
+                    <br>
+                </p>
             </div>
             <br>
 
@@ -138,7 +237,28 @@ p.standard {
                        <b> Wisdom </b>
                      <br>
                      <br>
-                     16
+                     <select>
+                            <option value="Wisdom01">1</option>
+                            <option value="Wisdom02">2</option>
+                            <option value="Wisdom03">3</option>
+                            <option value="Wisdom04">4</option>
+                            <option value="Wisdom05">5</option>
+                            <option value="Wisdom06">6</option>
+                            <option value="Wisdom07">7</option>
+                            <option value="Wisdom08">8</option>
+                            <option value="Wisdom09">9</option>
+                            <option value="Wisdom10">10</option>
+                            <option value="Wisdom11">11</option>
+                            <option value="Wisdom12">12</option>
+                            <option value="Wisdom13">13</option>
+                            <option value="Wisdom14">14</option>
+                            <option value="Wisdom15">15</option>
+                            <option value="Wisdom16">16</option>
+                            <option value="Wisdom17">17</option>
+                            <option value="Wisdom18">18</option>
+                            <option value="Wisdom19">19</option>
+                            <option value="Wisdom20">20</option>
+                          </select>
                      <br>
                      </p>
                 </div>
@@ -149,7 +269,28 @@ p.standard {
                            <b> Charisma </b>
                          <br>
                          <br>
-                         16
+                         <select>
+                                <option value="Charisma01">1</option>
+                                <option value="Charisma02">2</option>
+                                <option value="Charisma03">3</option>
+                                <option value="Charisma04">4</option>
+                                <option value="Charisma05">5</option>
+                                <option value="Charisma06">6</option>
+                                <option value="Charisma07">7</option>
+                                <option value="Charisma08">8</option>
+                                <option value="Charisma09">9</option>
+                                <option value="Charisma10">10</option>
+                                <option value="Charisma11">11</option>
+                                <option value="Charisma12">12</option>
+                                <option value="Charisma13">13</option>
+                                <option value="Charisma14">14</option>
+                                <option value="Charisma15">15</option>
+                                <option value="Charisma16">16</option>
+                                <option value="Charisma17">17</option>
+                                <option value="Charisma18">18</option>
+                                <option value="Charisma19">19</option>
+                                <option value="Charisma20">20</option>
+                              </select>
                          <br>
                          </p>
                     </div>
@@ -157,8 +298,15 @@ p.standard {
 
     <!-- </div> -->
 
-</div>
-</div> <!-- End div row -->
+    </div> <!-- End div col 1 row 1-->
+
+    <div class="col-2 menu">
+        <div>
+
+        </div>
+
+    </div>
+</div> <!-- End div row 1 -->
 
 </body>
 </html>
