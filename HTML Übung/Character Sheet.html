@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+    * {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
+.col-1 {width: 7%;
+    background-color:gray;
+    border-radius: 2em;
+    }
+
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+div.grayBackground {
+    background-color:gray;
+    width: 100px;
+    height: 42em;
+    padding: 5px;
+}
+
+div.stats {
+    background-color: white;
+    border-style: solid;
+    border-width: 500%;
+    margin: 2em, 2em;
+    outline-width: 1em;
+    border-radius: 25%;
+}
+
+p.standard {
+    text-align: center;
+    font-size: 0.75vw;
+    margin-left: inherit;
+}
+
+
+
+
+
+</style>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D&D Encounters</title>
+</head>
+<body>
+
+<header>
+<p>Character Name</p>
+
+</header>
+
+<div class="row">
+<div class="col-1 menu">
+
+ <!--  <div class="grayBackground">  -->   
+       <div class="stats">
+           <p class="standard">
+                <b>Strength</b>
+                <br>
+                <br>
+                18
+                <br>
+           </p>
+       </div> 
+       <br>
+       
+       <div class="stats">
+           <p class="standard"> 
+               <b>Dexterity </b>
+            <br>
+            <br>
+            16
+            <br>
+            </p>
+       </div>
+       <br>
+
+       <div class="stats">
+            <p class="standard"> 
+               <b> Constitution </b>
+             <br>
+             <br>
+             16
+             <br>
+             </p>
+        </div>
+        <br>
+
+        <div class="stats">
+                <p class="standard"> 
+                   <b> Intelligence </b>
+                 <br>
+                 <br>
+                 16
+                 <br>
+                 </p>
+            </div>
+            <br>
+
+            <div class="stats">
+                    <p class="standard"> 
+                       <b> Wisdom </b>
+                     <br>
+                     <br>
+                     16
+                     <br>
+                     </p>
+                </div>
+                <br>
+
+                <div class="stats">
+                        <p class="standard"> 
+                           <b> Charisma </b>
+                         <br>
+                         <br>
+                         16
+                         <br>
+                         </p>
+                    </div>
+                    <br>
+
+    <!-- </div> -->
+
+</div>
+</div> <!-- End div row -->
+
+</body>
+</html>
