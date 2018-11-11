@@ -5,6 +5,7 @@
 
 html {
     font-family: "Lucida Sans", sans-serif;
+    line-height: 10px;
 }
 
     * {
@@ -13,7 +14,7 @@ html {
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .col-1, .col-2,, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 input[type=submit] {
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 input[type=submit] {
     width: 100%;
     margin-top: 0;
     margin-left: 0;
@@ -30,7 +31,7 @@ html {
     border-radius: 2em;
     }
 
-.col-2 {width: 16.66%;}
+.col-2 {width: 13%;} /* 16.66 */
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
@@ -69,15 +70,117 @@ div.stats {
     border-radius: 25%;
 }
 
+/*
+div.clickable_circle {
+    background-color: white;
+    border-style: solid;
+    border-radius: 100%;
+    width: 1em;
+    height: 1em;
+}
+*/
+
 p.standard {
     text-align: center;
     font-size: 0.7vw;
     margin-left: inherit;
     word-wrap: break-word;
+    line-height: 20px;
 }
+
+p.saving_throws {
+    text-align: left;
+    font-size: 0.7vw;
+    margin-left: 3em;
+    word-wrap: break-word;
+    line-height: 10px;
+}
+
+/*
 select {
     width: 100%;
     max-width: 40px !important
+}
+
+button {
+    background-color: white;
+    border-radius: 25%;
+
+}
+
+.saving_throws_input {
+    -ms-transform: scale(1); 
+    -webkit-transform: scale(1); 
+    transform: scale(1);
+    text-align: center;
+    margin-left: 5em;
+    margin-top: 1em;
+}
+.label_st_input {
+    font-size: 0.7vw;
+    text-align: center;
+}
+
+*/
+
+
+/* The container */
+.container {
+    display: block;
+    align-items: left;
+    position: relative;
+    padding-left: 35px;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.7vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0.1em;
+    left: 1em;
+    height: 0.7em;
+    width: 0.7em;
+    background-color: #eee;
+    border-radius: 100%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #000000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
 }
 
 
@@ -301,11 +404,84 @@ select {
     </div> <!-- End div col 1 row 1-->
 
     <div class="col-2 menu">
-        <div>
+        <div class="stats">
 
+            
+            <!-- Clickable Circle
+                
+                  <div>
+                  <div class=clickable_circle id="clickable_circle" onclick="setColor()"> </div>
+                                           
+                            
+                       <script>
+                               var count = 1;
+                               function setColor(clickable_circle, color) {
+                                   var property = document.getElementById("clickable_circle");
+                                   if (count == 0) {
+                                       property.style.background = "white";
+                                       count = 1;        
+                                   }
+                                   else {
+                                       property.style.background = "black";
+                                       count = 0;
+                                   }
+                               }
+                           </script>
+                
+              -->     
+
+        
+            <!--  <input type="radio" class="saving_throws_input" name="saving_throws" value="st_Strength"> <label class="label_st_input"> Strength </label> <br>
+            <input type="radio" class="saving_throws_input" name="saving_throws" value="st_Dexterity"> <label class="label_st_input"> Dexterity </label> <br>
+            <input type="radio" class="saving_throws_input" name="saving_throws" value="st_Constitution"> <label class="label_st_input"> Constitution </label> <br>
+        
+        -->
+            
+
+            <!--
+
+                <p class="saving_throws">Strength</p> </div>
+                <p class="saving_throws">Dexterity</p>
+                <p class="saving_throws">Constitution</p>
+                <p class="saving_throws">Intelligence</p>
+                <p class="saving_throws">Wisdom</p>
+                <p class="saving_throws">Charisma</p>
+
+            -->
+
+            <label class="container">Strength
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Dexterity
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Constitution
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Intelligence
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Wisdom
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                    <label class="container">Charisma
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+
+
+
+
+           
+            <p class="saving_throws"><b>SAVING THROWS</b></p>
         </div>
 
-    </div>
+    </div> <!-- End div col 2 row 1-->
 </div> <!-- End div row 1 -->
 
 </body>
