@@ -24,10 +24,11 @@ div.grayBackground {
 div.stats {
     background-color: white;
     border-style: solid;
-   padding:20px
-    }
-
-
+    border-width: 500%;
+    margin: 2em, 2em;
+    outline-width: 1em;
+    border-radius: 25%;
+}
 
 /*
 div.clickable_circle {
@@ -54,17 +55,6 @@ p.saving_throws {
     word-wrap: break-word;
     line-height: 10px;
 }
-
-
-.form-group-static_savingthows {
-    text-align: center;
-    
-}
-
-.form-control_saving-throws {
-    margin: 1em;
-    align-items: center;
-} 
 
 /*
 select {
