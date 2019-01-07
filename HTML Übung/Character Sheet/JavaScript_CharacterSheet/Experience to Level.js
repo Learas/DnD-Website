@@ -6,7 +6,11 @@ function ChangeLevel() {
     let CharacterLevel = 0;
 
     function ExperienceToLevel() {
-        if (ExperiencePoints < 300) {
+        if (ExperiencePoints === 0) {
+            CharacterLevel = 0;
+            return CharacterLevel;
+        }
+        else if (ExperiencePoints < 300) {
             CharacterLevel = 1;
             return CharacterLevel;
         } else if (ExperiencePoints < 900) {
