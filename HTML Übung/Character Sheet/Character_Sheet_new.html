@@ -23,6 +23,40 @@
 <body>
 <br>
 
+
+<!--Character Details - Heading-->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-2">
+
+            <input type="number" name="ExperiencePoints" id="ExperiencePoints" value="0" min="0" oninput="ChangeLevel()"> 
+            <br>
+            
+            <p><b>Experience Points</b></p>
+
+        </div>
+
+<div class="col-1"></div>
+
+        <div class="col-2">
+            
+            <label for="CharacterLevel">
+                <p id="CharacterLevel"> 0 </p>
+                <b>Character Level</b>
+            </label>
+
+        </div>
+        <div class="col-7"></div>
+    </div>
+
+<br>
+
+
+</div>
+
+
     <div class="container">
         
         <div class="row">
@@ -210,42 +244,47 @@
                 <div class="container">
                     
 
+                        <p id="ProficencyBonus"> <b>Proficency Bonus</b></p>
+
+                    
+
                 </div>
+                <br>
 
 
                       <div class="checkbox">
                         <label for="checkbox">    
-                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" style="display: inline-block;"> Strength
+                            <input class="checkbox" type="checkbox" name="ExperiencePoints" value="ExperiencePoints" style="display: inline-block;"> Strength
                         </label> 
                         </div>
                         
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Dexterity
+                                    <input class="checkbox" type="checkbox" name="ExperiencePoints" value="ExperiencePoints"> Dexterity
                                 </label> 
                         </div>
 
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Constitution
+                                    <input class="checkbox" type="checkbox" name="ExperiencePoints" value="ExperiencePoints"> Constitution
                                 </label> 
                         </div>
 
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Intelligence
+                                    <input class="checkbox" type="checkbox" name="ExperiencePoints" value="ExperiencePoints"> Intelligence
                                 </label> 
                         </div>
 
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Wisdom
+                                    <input class="checkbox" type="checkbox" name="ExperiencePoints" value="ExperiencePoints"> Wisdom
                                 </label> 
                         </div>
 
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Charisma
+                                    <input class="checkbox" type="checkbox" name="ExperiencePoints" value="ExperiencePoints"> Charisma
                                 </label> 
                         </div>
 
@@ -269,10 +308,19 @@
     Wenn du es früher einbindest, findet es die HTML Knoten nicht, die danach definiert wurden.
     Das liegt daran, dass der Browser die Files streng nach Reihenfolge einbindet und direkt ausführt.
     Natürlich gibt es die Möglichkeit mit der Ausführung zu warten. (bspw. dom ready event) -->
-
-    <script src="Saving Throws Button Checkbox.js"></script> 
-
     
+<script>
+
+</script>
+
+   <!--
+
+   <script src="Experience to Level.js"></script>
+
+   --> 
+    <script src="Saving Throws Button Checkbox.js"></script> 
+    
+
     <!--  
         
     
