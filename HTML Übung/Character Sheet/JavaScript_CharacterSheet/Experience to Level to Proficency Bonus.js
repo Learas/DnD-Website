@@ -1,17 +1,14 @@
+
 // Experience to Level
 
-function ChangeLevel() {
-
+function ChangeExperience() {
     const ExperiencePoints = document.getElementById('ExperiencePoints').value;
-    let CharacterLevel = 0;
-
+    let CharacterLevel = 1;
+    
     function ExperienceToLevel() {
-        if (ExperiencePoints === 0) {
-            CharacterLevel = 0;
-            return CharacterLevel;
-        }
-        else if (ExperiencePoints < 300) {
+        if (ExperiencePoints < 300) {
             CharacterLevel = 1;
+
             return CharacterLevel;
         } else if (ExperiencePoints < 900) {
             CharacterLevel = 2;
@@ -84,4 +81,28 @@ function ChangeLevel() {
 
     document.getElementById('CharacterLevel').innerHTML = ExperienceToLevel();
 
+    let ProficencyBonus = 2;
+    
+    function LevelToProficencyBonus() {
+        if (CharacterLevel < 5) {
+            ProficencyBonus = 2;
+            return ProficencyBonus;
+        } else if (CharacterLevel < 9) {
+            ProficencyBonus = 3;
+            return ProficencyBonus;
+        } else if (CharacterLevel < 13) {
+            ProficencyBonus = 4;
+            return ProficencyBonus;
+        } else if (CharacterLevel < 17) {
+            ProficencyBonus = 5;
+            return ProficencyBonus;
+        } else {
+            ProficencyBonus = 6;
+            return ProficencyBonus;
+        }
+    }
+    
+    document.getElementById('ProficencyBonus').innerHTML = LevelToProficencyBonus();
+    
 }
+

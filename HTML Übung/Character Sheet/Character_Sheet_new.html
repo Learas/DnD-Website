@@ -31,10 +31,10 @@
 
         <div class="col-2">
 
-            <input type="number" name="ExperiencePoints" id="ExperiencePoints" value="0" min="0" oninput="ChangeLevel()"> 
+            <input type="number" name="ExperiencePoints" id="ExperiencePoints" value="0" min="0" oninput="ChangeExperience()"> 
             <br>
             
-            <p><b>Experience Points</b></p>
+            <p><b>EXPERIENCE POINTS</b></p>
 
         </div>
 
@@ -43,18 +43,20 @@
         <div class="col-2">
             
             <label for="CharacterLevel">
-                <p id="CharacterLevel"> 0 </p>
-                <b>Character Level</b>
+                <p id="CharacterLevel"> 1 </p>
+                <b>CHARACTER LEVEL</b>
             </label>
+<p id=CharacterLevelGlobal></p>
+
 
         </div>
         <div class="col-7"></div>
     </div>
 
+</div>
 <br>
 
-
-</div>
+<!--Character Details - Middle-->
 
 
     <div class="container">
@@ -239,12 +241,15 @@
                
 
 
-            <div class="col-2">
+            <div class="col-4">
 
                 <div class="container">
                     
 
-                        <p id="ProficencyBonus"> <b>Proficency Bonus</b></p>
+                        <label for="ProficencyBonus">
+                                <p id="ProficencyBonus"> 2 </p> <b>PROFICENCY BONUS</b>
+                            </label>
+                
 
                     
 
@@ -292,7 +297,7 @@
                         <p><b> SAVING THROWS</b></p>
                        
                     </div>
-                <div class="col-5"></div>
+                <div class="col-6"></div>
            
 
 
@@ -304,26 +309,15 @@
 
 
 
-    <!-- Am Ende wird das Javascript File eingebunden. Den Code würde ich auch auslagern. 
-    Wenn du es früher einbindest, findet es die HTML Knoten nicht, die danach definiert wurden.
-    Das liegt daran, dass der Browser die Files streng nach Reihenfolge einbindet und direkt ausführt.
-    Natürlich gibt es die Möglichkeit mit der Ausführung zu warten. (bspw. dom ready event) -->
     
-<script>
-
-</script>
 
 
+<!--JavaScript Java Script-->
 
-    <script src="JavaScript_CharacterSheet\Experience to Level.js"></script>
+    <script src="JavaScript_CharacterSheet\Experience to Level to Proficency Bonus.js"></script>
     <script src="JavaScript_CharacterSheet\Saving Throws Button Checkbox.js"></script> 
   
 
-    <!--  
-        
-    
-    
-    <script src="Character_Sheet-Saving_Throw.js"></script> -->  
 
 
 
