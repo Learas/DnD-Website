@@ -50,7 +50,10 @@
 
 
         </div>
-        <div class="col-7"></div>
+        <div class="col-7">
+            <p id="CharacterExperience">200</p>
+
+        </div>
     </div>
 
 </div>
@@ -74,36 +77,38 @@
                         <label for="Strength"><b>Strength</b></label>
                         
                         
-                            <select class="form-control_saving-throws" id="Strength">
-                                <option value="Strenght01" selected="selected">1</option>
-                                <option value="Strenght02">2</option>
-                                <option value="Strenght03">3</option>
-                                <option value="Strenght04">4</option>
-                                <option value="Strenght05">5</option>
-                                <option value="Strenght06">6</option>
-                                <option value="Strenght07">7</option>
-                                <option value="Strenght08">8</option>
-                                <option value="Strenght09">9</option>
-                                <option value="Strenght10">10</option>
-                                <option value="Strenght11">11</option>
-                                <option value="Strenght12">12</option>
-                                <option value="Strenght13">13</option>
-                                <option value="Strenght14">14</option>
-                                <option value="Strenght15">15</option>
-                                <option value="Strenght16">16</option>
-                                <option value="Strenght17">17</option>
-                                <option value="Strenght18">18</option>
-                                <option value="Strenght19">19</option>
-                                <option value="Strenght20">20</option>
+                            <select class="form-control_saving-throws" id="AbilityScoreStrength" oninput="getAbilityScoreModifier(); getSavingThrow()">
+                                <option value="Strength01">1</option>
+                                <option value="Strength02">2</option>
+                                <option value="Strength03">3</option>
+                                <option value="Strength04">4</option>
+                                <option value="Strength05">5</option>
+                                <option value="Strength06">6</option>
+                                <option value="Strength07">7</option>
+                                <option value="Strength08">8</option>
+                                <option value="Strength09">9</option>
+                                <option value="Strength10" selected="selected">10</option>
+                                <option value="Strength11">11</option>
+                                <option value="Strength12">12</option>
+                                <option value="Strength13">13</option>
+                                <option value="Strength14">14</option>
+                                <option value="Strength15">15</option>
+                                <option value="Strength16">16</option>
+                                <option value="Strength17">17</option>
+                                <option value="Strength18">18</option>
+                                <option value="Strength19">19</option>
+                                <option value="Strength20">20</option>
                             </select>
+                            <p id="AbilityScoreModifierStrength">0</p>
+
                         
                   
                     </div>
 
                     <div class="form-group static">
                     <label for="Dexterity"><b>Dexterity</b></label>
-                    <select class="form-control_saving-throws" id="Dexterity">
-                        <option value="Dexterity01" selected="selected">1</option>
+                    <select class="form-control_saving-throws" id="AbilityScoreDexterity" oninput="getAbilityScoreModifier()">
+                        <option value="Dexterity01">1</option>
                         <option value="Dexterity02">2</option>
                         <option value="Dexterity03">3</option>
                         <option value="Dexterity04">4</option>
@@ -112,7 +117,7 @@
                         <option value="Dexterity07">7</option>
                         <option value="Dexterity08">8</option>
                         <option value="Dexterity09">9</option>
-                        <option value="Dexterity10">10</option>
+                        <option value="Dexterity10" selected="selected">10</option>
                         <option value="Dexterity11">11</option>
                         <option value="Dexterity12">12</option>
                         <option value="Dexterity13">13</option>
@@ -125,11 +130,12 @@
                         <option value="Dexterity20">20</option>
                     </select>
                     </div>
+                    <p id="AbilityScoreModifierDexterity">0</p>
 
                     <div class="form-group static">
                     <label for="Constitution"><b>Constitution</b></label>
-                    <select class="form-control_saving-throws" id="Constitution">
-                        <option value="Constitution01" selected="selected">1</option>
+                    <select class="form-control_saving-throws" id="AbilityScoreConstitution" oninput="getAbilityScoreModifier()">
+                        <option value="Constitution01" >1</option>
                         <option value="Constitution02">2</option>
                         <option value="Constitution03">3</option>
                         <option value="Constitution04">4</option>
@@ -138,7 +144,7 @@
                         <option value="Constitution07">7</option>
                         <option value="Constitution08">8</option>
                         <option value="Constitution09">9</option>
-                        <option value="Constitution10">10</option>
+                        <option value="Constitution10" selected="selected">10</option>
                         <option value="Constitution11">11</option>
                         <option value="Constitution12">12</option>
                         <option value="Constitution13">13</option>
@@ -151,11 +157,12 @@
                         <option value="Constitution20">20</option>
                     </select>
                     </div>
+                    <p id="AbilityScoreModifierConstitution">0</p>
 
                     <div class="form-group static">
                     <label for="Intelligence"><b>Intelligence</b></label>
-                    <select class="form-control_saving-throws" id="Intelligence">
-                        <option value="Intelligence01" selected="selected">1</option>
+                    <select class="form-control_saving-throws" id="AbilityScoreIntelligence" oninput="getAbilityScoreModifier()">
+                        <option value="Intelligence01" >1</option>
                         <option value="Intelligence02">2</option>
                         <option value="Intelligence03">3</option>
                         <option value="Intelligence04">4</option>
@@ -164,7 +171,7 @@
                         <option value="Intelligence07">7</option>
                         <option value="Intelligence08">8</option>
                         <option value="Intelligence09">9</option>
-                        <option value="Intelligence10">10</option>
+                        <option value="Intelligence10" selected="selected">10</option>
                         <option value="Intelligence11">11</option>
                         <option value="Intelligence12">12</option>
                         <option value="Intelligence13">13</option>
@@ -177,11 +184,12 @@
                         <option value="Intelligence20">20</option>
                     </select>
                     </div>
+                    <p id="AbilityScoreModifierIntelligence">0</p>
 
                     <div class="form-group static">
                     <label for="Wisdom"><b>Wisdom</b></label>
-                    <select class="form-control_saving-throws" id="Wisdom">
-                        <option value="Wisdom01" selected="selected">1</option>
+                    <select class="form-control_saving-throws" id="AbilityScoreWisdom" oninput="getAbilityScoreModifier()">
+                        <option value="Wisdom01" >1</option>
                         <option value="Wisdom02">2</option>
                         <option value="Wisdom03">3</option>
                         <option value="Wisdom04">4</option>
@@ -190,7 +198,7 @@
                         <option value="Wisdom07">7</option>
                         <option value="Wisdom08">8</option>
                         <option value="Wisdom09">9</option>
-                        <option value="Wisdom10">10</option>
+                        <option value="Wisdom10" selected="selected">10</option>
                         <option value="Wisdom11">11</option>
                         <option value="Wisdom12">12</option>
                         <option value="Wisdom13">13</option>
@@ -202,13 +210,14 @@
                         <option value="Wisdom19">19</option>
                         <option value="Wisdom20">20</option>
                       </select>
+                      <p id="AbilityScoreModifierWisdom">0</p>
                       
                     </div>
 
                     <div class="form-group static">
                         <label for="Charisma"><b>Charisma</b></label>
-                        <select class="form-control_saving-throws" id="Charisma">
-                        <option value="Charisma01" selected="selected">1</option>
+                        <select class="form-control_saving-throws" id="AbilityScoreCharisma" oninput="getAbilityScoreModifier()">
+                        <option value="Charisma01">1</option>
                         <option value="Charisma02">2</option>
                         <option value="Charisma03">3</option>
                         <option value="Charisma04">4</option>
@@ -217,7 +226,7 @@
                         <option value="Charisma07">7</option>
                         <option value="Charisma08">8</option>
                         <option value="Charisma09">9</option>
-                        <option value="Charisma10">10</option>
+                        <option value="Charisma10" selected="selected">10</option>
                         <option value="Charisma11">11</option>
                         <option value="Charisma12">12</option>
                         <option value="Charisma13">13</option>
@@ -229,7 +238,8 @@
                         <option value="Charisma19">19</option>
                         <option value="Charisma20">20</option>
                     </select>
-                    
+                    <p id="AbilityScoreModifierCharisma">0</p>
+
                     </div>
                 
                 </div> <!--JumboTron-->
@@ -259,13 +269,14 @@
 
                       <div class="checkbox">
                         <label for="checkbox">    
-                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Strength
+                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowStrength" onclick="getSavingThrow()"> Strength
                         </label> 
+                        <p id="SavingThrowStrength">2</p>
                         </div>
                         
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Dexterity
+                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="SavingThrowDexterity"> Dexterity
                                 </label> 
                         </div>
 
@@ -313,12 +324,12 @@
 
 
 <!--JavaScript Java Script-->
-
+    <script src="JavaScript_CharacterSheet\CharacterSheet.js"></script>
     <script src="JavaScript_CharacterSheet\Experience to Level to Proficency Bonus.js"></script>
-    <script src="JavaScript_CharacterSheet\Saving Throws Button Checkbox.js"></script> 
-  
-
-
+    <script src="JavaScript_CharacterSheet\Ability Score Modifier.js"></script>
+    <script src="JavaScript_CharacterSheet\Saving Throws Button Checkbox.js"></script>
+    <script src="JavaScript_CharacterSheet\Character_Sheet-Saving_Throw.js"></script>  
+    <script src="JavaScript_CharacterSheet\test.js"></script>
 
 
 </body></html>
