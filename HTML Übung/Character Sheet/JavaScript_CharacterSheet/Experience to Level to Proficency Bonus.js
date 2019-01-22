@@ -1,3 +1,6 @@
+document.getElementById("ExperiencePoints").addEventListener("input", ChangeExperience);
+
+
 
 // Experience to Level
 CharacterLevel = 20;

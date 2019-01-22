@@ -31,7 +31,7 @@
 
         <div class="col-2">
 
-            <input type="number" name="ExperiencePoints" id="ExperiencePoints" value="0" min="0" oninput="ChangeExperience()"> 
+            <input type="number" name="ExperiencePoints" id="ExperiencePoints" value="0" min="0"> 
             <br>
             
             <p><b>EXPERIENCE POINTS</b></p>
@@ -77,7 +77,7 @@
                         <label for="Strength"><b>Strength</b></label>
                         
                         
-                            <select class="form-control_saving-throws" id="AbilityScoreStrength" oninput="getAbilityScoreModifier(); getSavingThrow()">
+                            <select class="form-control_saving-throws" id="AbilityScoreStrength">
                                 <option value="Strength01">1</option>
                                 <option value="Strength02">2</option>
                                 <option value="Strength03">3</option>
@@ -107,7 +107,7 @@
 
                     <div class="form-group static">
                     <label for="Dexterity"><b>Dexterity</b></label>
-                    <select class="form-control_saving-throws" id="AbilityScoreDexterity" oninput="getAbilityScoreModifier()">
+                    <select class="form-control_saving-throws" id="AbilityScoreDexterity">
                         <option value="Dexterity01">1</option>
                         <option value="Dexterity02">2</option>
                         <option value="Dexterity03">3</option>
@@ -134,7 +134,7 @@
 
                     <div class="form-group static">
                     <label for="Constitution"><b>Constitution</b></label>
-                    <select class="form-control_saving-throws" id="AbilityScoreConstitution" oninput="getAbilityScoreModifier()">
+                    <select class="form-control_saving-throws" id="AbilityScoreConstitution">
                         <option value="Constitution01" >1</option>
                         <option value="Constitution02">2</option>
                         <option value="Constitution03">3</option>
@@ -161,7 +161,7 @@
 
                     <div class="form-group static">
                     <label for="Intelligence"><b>Intelligence</b></label>
-                    <select class="form-control_saving-throws" id="AbilityScoreIntelligence" oninput="getAbilityScoreModifier()">
+                    <select class="form-control_saving-throws" id="AbilityScoreIntelligence">
                         <option value="Intelligence01" >1</option>
                         <option value="Intelligence02">2</option>
                         <option value="Intelligence03">3</option>
@@ -188,7 +188,7 @@
 
                     <div class="form-group static">
                     <label for="Wisdom"><b>Wisdom</b></label>
-                    <select class="form-control_saving-throws" id="AbilityScoreWisdom" oninput="getAbilityScoreModifier()">
+                    <select class="form-control_saving-throws" id="AbilityScoreWisdom">
                         <option value="Wisdom01" >1</option>
                         <option value="Wisdom02">2</option>
                         <option value="Wisdom03">3</option>
@@ -216,7 +216,7 @@
 
                     <div class="form-group static">
                         <label for="Charisma"><b>Charisma</b></label>
-                        <select class="form-control_saving-throws" id="AbilityScoreCharisma" oninput="getAbilityScoreModifier()">
+                        <select class="form-control_saving-throws" id="AbilityScoreCharisma">
                         <option value="Charisma01">1</option>
                         <option value="Charisma02">2</option>
                         <option value="Charisma03">3</option>
@@ -269,39 +269,44 @@
 
                       <div class="checkbox">
                         <label for="checkbox">    
-                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowStrength" onclick="getSavingThrow()"> Strength
+                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowStrength"> Strength
                         </label> 
-                        <p id="SavingThrowStrength">2</p>
+                        <p id="SavingThrowStrength">0</p>
                         </div>
                         
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="SavingThrowDexterity"> Dexterity
+                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowDexterity"> Dexterity
                                 </label> 
+                                <p id="SavingThrowDexterity">0</p>
                         </div>
 
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Constitution
+                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"id="CheckboxSavingThrowConstitution"> Constitution
                                 </label> 
+                                <p id="SavingThrowConstitution">0</p>
                         </div>
 
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Intelligence
+                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowIntelligence"> Intelligence
                                 </label> 
+                                <p id="SavingThrowIntelligence">0</p>
                         </div>
 
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Wisdom
+                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowWisdom"> Wisdom
                                 </label> 
+                                <p id="SavingThrowWisdom">0</p>
                         </div>
 
                         <div class="checkbox">
                                 <label for="checkbox">    
-                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"> Charisma
+                                    <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowCharisma"> Charisma
                                 </label> 
+                                <p id="SavingThrowCharisma">0</p>
                         </div>
 
                         <br>

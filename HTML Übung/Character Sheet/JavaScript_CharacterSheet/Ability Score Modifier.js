@@ -1,5 +1,18 @@
+document.getElementById("AbilityScoreStrength").addEventListener("input", getAbilityScoreModifier);
+document.getElementById("AbilityScoreDexterity").addEventListener("input", getAbilityScoreModifier);
+document.getElementById("AbilityScoreConstitution").addEventListener("input", getAbilityScoreModifier);
+document.getElementById("AbilityScoreIntelligence").addEventListener("input", getAbilityScoreModifier);
+document.getElementById("AbilityScoreWisdom").addEventListener("input", getAbilityScoreModifier);
+document.getElementById("AbilityScoreCharisma").addEventListener("input", getAbilityScoreModifier);
+
+
 AbilityScoreModifierStrength = 0;
 AbilityScoreModifierDexterity = 0;
+AbilityScoreModifierConstitution = 0;
+AbilityScoreModifierIntelligence = 0;
+AbilityScoreModifierWisdom = 0;
+AbilityScoreModifierCharisma = 0;
+
 
 function getAbilityScoreModifier() {
 function getAbilityScoreModifierStrength() {
@@ -28,7 +41,6 @@ function getAbilityScoreModifierDexterity() {
 function getAbilityScoreModifierConstitution() {
     CharacterStatsConstitution = document.getElementById('AbilityScoreConstitution').selectedIndex + 1;
     let i;
- 
     for (i = 0; i = CharacterStatsConstitution; i++) {
         if (CharacterStatsConstitution === i) {
             AbilityScoreModifierConstitution = Math.floor((i - 10) / 2);
