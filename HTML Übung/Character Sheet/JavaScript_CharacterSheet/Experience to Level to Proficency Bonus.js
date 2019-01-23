@@ -1,4 +1,4 @@
-document.getElementById("ExperiencePoints").addEventListener("input", ChangeExperience);
+document.getElementById('ExperiencePoints').addEventListener('input', ChangeExperience);
 
 
 
@@ -16,7 +16,7 @@ function ChangeExperience() {
             CharacterLevel = 1;
 
             return CharacterLevel;
-        } else if (ExperiencePoints < 900 && ExperiencePoints >= 300 ) {
+        } else if (ExperiencePoints < 900 && ExperiencePoints >= 300) {
             CharacterLevel = 2;
             TestFunction = CharacterLevel;
             return CharacterLevel;
@@ -74,7 +74,7 @@ function ChangeExperience() {
             CharacterLevel = 17;
             return CharacterLevel;
         }
-        else if (ExperiencePoints < 305000 && ExperiencePoints >=265000) {
+        else if (ExperiencePoints < 305000 && ExperiencePoints >= 265000) {
             CharacterLevel = 18;
             return CharacterLevel;
         } else if (ExperiencePoints < 355000 && ExperiencePoints >= 305000) {
@@ -84,14 +84,11 @@ function ChangeExperience() {
             CharacterLevel = 20;
             return CharacterLevel;
         } else {
-            CharacterLevel = "Error";
+            CharacterLevel = 'Error';
         }
 
     }
     document.getElementById('CharacterLevel').innerHTML = ExperienceToLevel();
-    
-    
-
     
     function LevelToProficencyBonus() {
         if (CharacterLevel < 5) {
@@ -109,11 +106,13 @@ function ChangeExperience() {
         } else {
             ProficencyBonus = 6;
             return ProficencyBonus;
-        };
+        }
     }
-    getSavingThrow.apply(ProficencyBonus);
-    
     document.getElementById('ProficencyBonus').innerHTML = LevelToProficencyBonus();
+
+    // other JavaScript / Java Script functions
+    getSavingThrow.apply(ProficencyBonus);
+    getSkills.apply(ProficencyBonus);
 }
 
 
