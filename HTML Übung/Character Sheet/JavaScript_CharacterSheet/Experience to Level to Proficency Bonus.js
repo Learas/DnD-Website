@@ -1,3 +1,5 @@
+// working 23.01.2019
+
 document.getElementById('ExperiencePoints').addEventListener('input', ChangeExperience);
 
 

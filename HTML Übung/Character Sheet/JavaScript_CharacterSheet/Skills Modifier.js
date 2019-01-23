@@ -32,7 +32,6 @@ document.getElementById('CheckboxSkillsSurvival').addEventListener('input', getS
 
 
 function getSkills() {
-    // get Ability Score
 
     // Acrobatics --> Dexterity
     function getSkillsAcrobatics() {
