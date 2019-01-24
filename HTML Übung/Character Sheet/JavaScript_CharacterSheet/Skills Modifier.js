@@ -1,4 +1,4 @@
-// in progress
+// 24.01.2019 working
 
 document.getElementById('ExperiencePoints').addEventListener('input', ChangeExperience);
 
@@ -24,7 +24,7 @@ document.getElementById('CheckboxSkillsPerception').addEventListener('input', ge
 document.getElementById('CheckboxSkillsPerformance').addEventListener('input', getSkills);
 document.getElementById('CheckboxSkillsPersuasion').addEventListener('input', getSkills);
 document.getElementById('CheckboxSkillsReligion').addEventListener('input', getSkills);
-document.getElementById('CheckboxSkillsSlightofHands').addEventListener('input', getSkills);
+document.getElementById('CheckboxSkillsSleightofHand').addEventListener('input', getSkills);
 document.getElementById('CheckboxSkillsStealth').addEventListener('input', getSkills);
 document.getElementById('CheckboxSkillsSurvival').addEventListener('input', getSkills);
 
@@ -129,6 +129,128 @@ function getSkills() {
         return SkillsIntimidation;
     }
 
+    // Investigation --> Intelligence
+    function getSkillsInvestigation() {
+        let SkillsInvestigation = 0;
+        const InvestigationCheckbox = document.getElementById('CheckboxSkillsInvestigation');
+        if (InvestigationCheckbox.checked == true) {
+            SkillsInvestigation = ProficencyBonus + AbilityScoreModifierIntelligence;
+        } else {
+            SkillsInvestigation = AbilityScoreModifierIntelligence;
+        }
+        return SkillsInvestigation;
+    }
+
+    // Medicine --> Wisdom
+    function getSkillsMedicine() {
+        let SkillsMedicine = 0;
+        const MedicineCheckbox = document.getElementById('CheckboxSkillsMedicine');
+        if (MedicineCheckbox.checked == true) {
+            SkillsMedicine = ProficencyBonus + AbilityScoreModifierWisdom;
+        } else {
+            SkillsMedicine = AbilityScoreModifierWisdom;
+        }
+        return SkillsMedicine;
+    }
+
+    // Nature --> Intelligence
+    function getSkillsNature() {
+        let SkillsNature = 0;
+        const NatureCheckbox = document.getElementById('CheckboxSkillsNature');
+        if (NatureCheckbox.checked == true) {
+            SkillsNature = ProficencyBonus + AbilityScoreModifierIntelligence;
+        } else {
+            SkillsNature = AbilityScoreModifierIntelligence;
+        }
+        return SkillsNature;
+    }     
+
+    // Perception --> Wisdom
+    function getSkillsPerception() {
+        let SkillsPerception = 0;
+        const PerceptionCheckbox = document.getElementById('CheckboxSkillsPerception');
+        if (PerceptionCheckbox.checked == true) {
+            SkillsPerception = ProficencyBonus + AbilityScoreModifierWisdom;
+        } else {
+            SkillsPerception = AbilityScoreModifierWisdom;
+        }
+        return SkillsPerception;
+    }
+
+    // Performance --> Charisma
+    function getSkillsPerformance() {
+        let SkillsPerformance = 0;
+        const PerformanceCheckbox = document.getElementById('CheckboxSkillsPerformance');
+        if (PerformanceCheckbox.checked == true) {
+            SkillsPerformance = ProficencyBonus + AbilityScoreModifierCharisma;
+        } else {
+            SkillsPerformance = AbilityScoreModifierCharisma;
+        }
+        return SkillsPerformance;
+    } 
+
+    // Persuasion --> Charisma
+    function getSkillsPersuasion() {
+        let SkillsPersuasion = 0;
+        const PersuasionCheckbox = document.getElementById('CheckboxSkillsPersuasion');
+        if (PersuasionCheckbox.checked == true) {
+            SkillsPersuasion = ProficencyBonus + AbilityScoreModifierCharisma;
+        } else {
+            SkillsPersuasion = AbilityScoreModifierCharisma;
+        }
+        return SkillsPersuasion;
+    } 
+
+    // Religion --> Intelligence
+    function getSkillsReligion() {
+        let SkillsReligion = 0;
+        const ReligionCheckbox = document.getElementById('CheckboxSkillsReligion');
+        if (ReligionCheckbox.checked == true) {
+            SkillsReligion = ProficencyBonus + AbilityScoreModifierIntelligence;
+        } else {
+            SkillsReligion = AbilityScoreModifierIntelligence;
+        }
+        return SkillsReligion;
+    } 
+
+    // Sleight of Hands --> Dexterity
+    function getSkillsSleightofHand() {
+        let SkillsSleightofHand = 0;
+        const SleightofHandCheckbox = document.getElementById('CheckboxSkillsSleightofHand');
+        if (SleightofHandCheckbox.checked == true) {
+            SkillsSleightofHand = ProficencyBonus + AbilityScoreModifierDexterity;
+        } else {
+            SkillsSleightofHand = AbilityScoreModifierDexterity;
+        }
+        return SkillsSleightofHand;
+    } 
+
+    // Stealth--> Dexterity
+    function getSkillsStealth() {
+        let SkillsStealth = 0;
+        const StealthCheckbox = document.getElementById('CheckboxSkillsStealth');
+        if (StealthCheckbox.checked == true) {
+            SkillsStealth = ProficencyBonus + AbilityScoreModifierDexterity;
+        } else {
+            SkillsStealth = AbilityScoreModifierDexterity;
+        }
+        return SkillsStealth;
+    } 
+
+    // Survival--> Wisdom
+    function getSkillsSurvival() {
+        let SkillsSurvival = 0;
+        const SurvivalCheckbox = document.getElementById('CheckboxSkillsSurvival');
+        if (SurvivalCheckbox.checked == true) {
+            SkillsSurvival = ProficencyBonus + AbilityScoreModifierWisdom;
+        } else {
+            SkillsSurvival = AbilityScoreModifierWisdom;
+        }
+        return SkillsSurvival;
+    } 
+
+     
+
     document.getElementById('SkillsAcrobatics').innerHTML = getSkillsAcrobatics();
     document.getElementById('SkillsAnimalHandling').innerHTML = getSkillsAnimalHandling();
     document.getElementById('SkillsArcana').innerHTML = getSkillsArcana();
@@ -137,5 +259,16 @@ function getSkills() {
     document.getElementById('SkillsHistory').innerHTML = getSkillsHistory();
     document.getElementById('SkillsInsight').innerHTML = getSkillsInsight();
     document.getElementById('SkillsIntimidation').innerHTML = getSkillsIntimidation();
+    document.getElementById('SkillsInvestigation').innerHTML = getSkillsInvestigation();
+    document.getElementById('SkillsMedicine').innerHTML = getSkillsMedicine();
+    document.getElementById('SkillsNature').innerHTML = getSkillsNature();
+    document.getElementById('SkillsPerception').innerHTML = getSkillsPerception();
+    document.getElementById('SkillsPerformance').innerHTML = getSkillsPerformance();
+    document.getElementById('SkillsPersuasion').innerHTML = getSkillsPersuasion();
+    document.getElementById('SkillsReligion').innerHTML = getSkillsReligion();
+    document.getElementById('SkillsSleightofHand').innerHTML = getSkillsSleightofHand();
+    document.getElementById('SkillsStealth').innerHTML = getSkillsStealth();
+    document.getElementById('SkillsSurvival').innerHTML = getSkillsSurvival();
+
 }
 
