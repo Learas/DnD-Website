@@ -26,6 +26,62 @@
 
 <!--Character Details - Heading-->
 <div class="container">
+    <div class="row">
+
+        <div class="col-2">
+
+                <select class="CharacterClass" id="CharacterClass">
+                        <option value="---" selected="selected">---</option>    
+                        <option value="Barbarian">Barbarian</option>
+                        <option value="Bard">Bard</option>
+                        <option value="Cleric">Cleric</option>
+                        <option value="Druid">Druid</option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Monk">Monk</option>
+                        <option value="Paladin">Paladin</option>
+                        <option value="Ranger">Ranger</option>
+                        <option value="Rogue">Rogue</option>
+                        <option value="Sorcerer">Sorcerer</option>
+                        <option value="Warlock">Warlock</option>
+                        <option value="Wizard">Wizard</option>
+                </select>   
+
+        </div>
+
+        <div class="col-2">
+
+
+            <!--To Change - with extra select for subraces depending on the main race!-->
+                <select class="CharacterRace" id="CharacterRace">
+                        <option value="---" selected="selected">---</option>    
+                        <option value="Dragonborn">Dragonborn</option>
+                        <optgroup label="Dwarf">
+                            <option value="Duergar">Duergar</option>
+                            <option value="Hill Dwarf">Hill Dwarf</option>
+                            <option value="Mountain Dwarf">Mountain Dwarf</option>
+                        </optgroup>
+                        <optgroup label="Elf">
+                            <option value="Dark Elf">Dark Elf</option>
+                            <option value="High Elf">High Elf</option>
+                            <option value="Wood Elf">Wood Elf</option>
+                        </optgroup>
+                        <optgroup label="Gnome">
+                            <option value="Forest Gnome">Forest Gnome</option>
+                            <option value="Rock Gnome">Rock Gnome</option>
+                        </optgroup>
+                        <option value="Half Elf">Half Elf</option>
+                        <option value="Halof Orc">Half Orc</option>
+                        <option value="Paladin">Halfling</option>
+                        <option value="Ranger">Human</option>
+                        <option value="Rogue">Tiefling</option>
+                </select>   
+
+        </div>
+
+        <div class="col-8"></div>
+
+    </div>
+    <!--End Row-->
 
     <div class="row">
 
@@ -49,6 +105,8 @@
             <p id=CharacterLevelGlobal></p>
 
         </div>
+
+    <div class="col-7"></div>
        
     </div>
 
@@ -448,8 +506,10 @@
 
 
 
-                </div>
-            </div>
+        </div>
+        <!--End Row-->
+    </div>
+    <!--End Container-->
 
 
 
