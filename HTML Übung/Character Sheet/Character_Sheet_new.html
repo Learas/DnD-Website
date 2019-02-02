@@ -29,7 +29,7 @@
     <div class="row">
 
         <div class="col-2">
-
+            <label for="CharacterClass">Class 
                 <select class="CharacterClass" id="CharacterClass">
                         <option value="---" selected="selected">---</option>    
                         <option value="Barbarian">Barbarian</option>
@@ -46,13 +46,14 @@
                         <option value="Wizard">Wizard</option>
                 </select>   
 
+            </label>
         </div>
 
         <div class="col-2">
 
 
             <!--To Change - with extra select for subraces depending on the main race!-->
-                <select class="CharacterRace" id="CharacterRace">
+                <select class="CharacterRace_old" id="CharacterRace_old">
                         <option value="---" selected="selected">---</option>    
                         <option value="Dragonborn">Dragonborn</option>
                         <optgroup label="Dwarf">
@@ -70,12 +71,69 @@
                             <option value="Rock Gnome">Rock Gnome</option>
                         </optgroup>
                         <option value="Half Elf">Half Elf</option>
-                        <option value="Halof Orc">Half Orc</option>
-                        <option value="Paladin">Halfling</option>
-                        <option value="Ranger">Human</option>
-                        <option value="Rogue">Tiefling</option>
-                </select>   
+                        <option value="Half Orc">Half Orc</option>
+                        <optgroup label="Halfling">
+                            <option value="Lightfoot Halfling">Lightfoot Halfling</option>
+                            <option value="Stout Halfling">Stout Halfling</option>
+                        </optgroup>
+                        <option value="Human">Human</option>
+                        <option value="Tiefling">Tiefling</option>
+                </select>
 
+            <label for="ChracterRace">Race
+                <select class="CharacterRace" id="CharacterRace">
+                        <option value="---" selected="selected">---</option>    
+                        <option value="Dragonborn">Dragonborn</option>
+                        <option value="Dwarf">Dwarf</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Gnome">Gnome</option>
+                        <option value="Half Elf">Half Elf</option>
+                        <option value="Half Orc">Half Orc</option>
+                        <option value="Halfling">Halfling</option>
+                        <option value="Human">Human</option>
+                        <option value="Tiefling">Tiefling</option>
+                </select>   
+            </label>
+
+            <label for="ChracterSubrace" id="CharacterSubrace">Subrace
+                    <select class="CharacterSubrace" id="CharacterSubrace_Dwarf" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Duergar">Duergar</option>
+                            <option value="Hill">Hill</option>
+                            <option value="Mountain">Mountain</option>
+                    </select>
+                    <select class="CharacterSubrace" id="CharacterSubrace_Elf" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Dark">Dark</option>
+                            <option value="High">High</option>
+                            <option value="Wood">Wood</option>
+                    </select>
+                    <select class="CharacterSubrace" id="CharacterSubrace_Gnome" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Forest">Forest</option>
+                            <option value="Rock">Rock</option>
+                    </select>
+                    <select class="CharacterSubrace" id="CharacterSubrace_Halfling" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Lightfoot">Lightfoot</option>
+                            <option value="Stout">Stout</option>
+                    </select>        
+            </label>
+            <label for="CharacterAncestry" id="CharacterAncestry" style="display: none;">Ancestry
+                    <select class="CharacterAncestry" id="CharacterAncestry_Dragonborn" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Black">Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Brass">Brass</option>
+                            <option value="Bronze">Bronze</option>
+                            <option value="Copper">Copper</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                            <option value="Silver">Silver</option>
+                            <option value="White">White</option>
+                    </select>
+            </label>
         </div>
 
         <div class="col-8"></div>
@@ -519,6 +577,7 @@
 
 <!--JavaScript Java Script-->
     <script src="JavaScript_CharacterSheet\CharacterSheet.js"></script>
+    <script src="JavaScript_CharacterSheet\Character_Subrace.js"></script>
     <script src="JavaScript_CharacterSheet\Experience to Level to Proficency Bonus.js"></script>
     <script src="JavaScript_CharacterSheet\Ability Score Modifier.js"></script>
     <script src="JavaScript_CharacterSheet\Saving Throws Button Checkbox.js"></script>
@@ -527,4 +586,5 @@
 
 
 
-</body></html>
+</body>
+</html>
