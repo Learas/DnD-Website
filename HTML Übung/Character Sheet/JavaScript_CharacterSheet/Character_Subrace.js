@@ -1,4 +1,4 @@
-// start 02.02.2019
+// Working 02.02.2019 
 
 document.getElementById('CharacterRace').addEventListener('input', getSubrace);
 
