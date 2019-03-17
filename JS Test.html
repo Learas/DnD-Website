@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Objects</h2>
+
+    <p id="CharacterLevel1">100</p>
+    <p id="ExperiencePoints1">300</p>
+
+<p id="CharacterLevel">200</p>
+<p id="ExperiencePoints">400</p>
+
+    <p id="CSStr">2</p>
+    <p id="CSTStr">300</p>
+
+
+
+    <p id="gCSTStr">800</p>
+    <p id="gCSTDex">9</p>
+    <p id="gCSTCon">10</p>
+    <p id="gCSTInt">11</p>
+    <p id="gCSTWis">12</p>
+    <p id="gCSTChar">13</p>
+
+    <script>
+
+
+
+        
+        // Experience to Level
+        const ExperiencePoints = 2;
+        let CharacterLevel = 0;
+  
+        document.getElementById('CharacterLevel1').innerHTML = CharacterLevel;
+        document.getElementById('ExperiencePoints1').innerHTML = ExperiencePoints
+        
+
+        function ExperienceToLevel() {
+if (ExperiencePoints < 300) {
+    CharacterLevel = 1;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 900) {
+    CharacterLevel = 2;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 2700) {
+    CharacterLevel = 3;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 6500) {
+    CharacterLevel = 4;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 14000) {
+    CharacterLevel = 5;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 23000) {
+    CharacterLevel = 6;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 34000) {
+    CharacterLevel = 7;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 48000) {
+    CharacterLevel = 8;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 64000) {
+    CharacterLevel = 9;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 85000) {
+    CharacterLevel = 10;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 100000) {
+    CharacterLevel = 11;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 120000) {
+    CharacterLevel = 12;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 140000) {
+    CharacterLevel = 13;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 165000) {
+    CharacterLevel = 14;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 195000) {
+    CharacterLevel = 15;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 225000) {
+    CharacterLevel = 16;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 265000) {
+    CharacterLevel = 17;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 305000) {
+    CharacterLevel = 18;
+    return CharacterLevel;
+}
+else if (ExperiencePoints < 355000) {
+    CharacterLevel = 19;
+    return CharacterLevel;
+}
+else {
+    CharacterLevel = 20;
+    return CharacterLevel;
+}
+}
+
+
+
+    document.getElementById('CharacterLevel').innerHTML = ExperienceToLevel();
+    
+    document.getElementById('ExperiencePoints').innerHTML = ExperiencePoints;
+
+
+
+
+
+
+
+        // working
+        var CharacterStats = {
+            Strength: 14,
+            Dexterity: 10,
+            Constitution: 19,
+            Intelligence: 8,
+            Wisdom: 7,
+            Charisma: 13,
+        };
+
+        var CharacterSavingThrows = {
+            Strength: 0,
+            Dexterity: 0,
+            Constitution: 0,
+            Intelligence: 0,
+            Wisdom: 0,
+            Charisma: 0,
+        };
+
+        document.getElementById("CSStr").innerHTML = CharacterStats.Strength;
+        document.getElementById("CSTStr").innerHTML = CharacterSavingThrows.Strength;
+
+
+        function getCharacterSavingThrowsStrength() {
+            var i;
+
+            for (i = 0; i = 14; i++) {
+                console.log(i)
+                 if (CharacterStats.Strength === i) {
+                    CharacterSavingThrows.Strength = Math.floor((i - 10) / 2);
+                    return CharacterSavingThrows.Strength;
+                };
+            };
+
+        };
+
+        console.log(getCharacterSavingThrowsStrength())
+
+
+
+        function getCharacterSavingThrowsDexterity() {
+            var i;
+            for (i = 0; i = CharacterStats.Dexterity; i++) {
+                 if (CharacterStats.Dexterity === i) {
+                    CharacterSavingThrows.Dexterity = Math.floor((i - 10) / 2);
+                    return CharacterSavingThrows.Dexterity;
+
+
+                    /*  } else
+                      else if (CharacterStats.Strength === 12 || CharacterStats.Strength === 13) {
+                      CharacterSavingThrows.Strength = 1;
+                      } else else if (CharacterStats.Strength === 14 || CharacterStats.Strength === 15) {
+                      CharacterSavingThrows.Strength = 2;*/
+                    // return CharacterSavingThrows.Strength; 
+
+                };
+            };
+            //document.getElementById("CSSS").innerHTML = CharacterStats.Strength;
+            //document.getElementById("CSTSS").innerHTML = CharacterSavingThrows.Strength; 
+
+        };
+
+
+        function getCharacterSavingThrowsConstitution() {
+            var i;
+
+            for (i = 0; i = CharacterStats.Constitution; i++) {
+                 if (CharacterStats.Constitution === i) {
+                    CharacterSavingThrows.Constitution = Math.floor((i - 10) / 2);
+                    return CharacterSavingThrows.Constitution;
+                };
+            };
+        };
+
+        function getCharacterSavingThrowsWisdom() {
+            var i;
+
+            for (i = 0; i = CharacterStats.Wisdom; i++) {
+                 if (CharacterStats.Wisdom === i) {
+                    CharacterSavingThrows.Wisdom = Math.floor((i - 10) / 2);
+                    return CharacterSavingThrows.Wisdom;
+                };
+            };
+        };
+
+        function getCharacterSavingThrowsIntelligence() {
+            var i;
+
+            for (i = 0; i = CharacterStats.Intelligence; i++) {
+                 if (CharacterStats.Intelligence === i) {
+                    CharacterSavingThrows.Intelligence = Math.floor((i - 10) / 2);
+                    return CharacterSavingThrows.Intelligence;
+                };
+            };
+        };
+
+        function getCharacterSavingThrowsCharisma() {
+            var i;
+
+            for (i = 0; i = CharacterStats.Charisma; i++) {
+                 if (CharacterStats.Charisma === i) {
+                    CharacterSavingThrows.Charisma = Math.floor((i - 10) / 2);
+                    return CharacterSavingThrows.Charisma;
+                };
+            };
+        };
+
+        //write result
+        document.getElementById("gCSTStr").innerHTML = getCharacterSavingThrowsStrength() + " Strenght";
+        document.getElementById("gCSTDex").innerHTML = getCharacterSavingThrowsDexterity();
+        document.getElementById("gCSTCon").innerHTML = getCharacterSavingThrowsConstitution();
+        document.getElementById("gCSTInt").innerHTML = getCharacterSavingThrowsIntelligence();
+        document.getElementById("gCSTWis").innerHTML = getCharacterSavingThrowsWisdom();
+        document.getElementById("gCSTChar").innerHTML = getCharacterSavingThrowsCharisma();
+
+
+
+//document.getElementById("CSSSS").innerHTML = CharacterStats.Strength;
+//document.getElementById("CSTSSS").innerHTML = CharacterSavingThrows.Strength;
+
+    </script>
+
+</body>
+
+</html>

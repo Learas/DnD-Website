@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Character Sheet">
+        <meta name="author" content="Learas">
+
+        <!--Einbindung bootstrap-->
+        <link rel="stylesheet" href="Character_Sheet_new-Dateien/bootstrap.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- Einbindung jQuery-->
+        <script src="Character_Sheet_new-Dateien/jquery-3.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="Character_Sheet_new-Dateien/popper.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="Character_Sheet_new-Dateien/bootstrap.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <title>Character Sheet</title>
+
+    <link rel="stylesheet" href="HTML Übung\Character Sheet\Styles-Character_Sheet.css"> 
+   <!--  Character_Sheet_new-Dateien/Styles-Character_Sheet.css - vorheriges .css -->
+</head>
+<body>
+<br>
+
+
+<!--Character Details - Heading-->
+<div class="container">
+    <div class="row">
+
+        <div class="col-2">
+            <label for="CharacterClass">Class 
+                <select class="CharacterClass" id="CharacterClass">
+                        <option value="---" selected="selected">---</option>    
+                        <option value="Barbarian">Barbarian</option>
+                        <option value="Bard">Bard</option>
+                        <option value="Cleric">Cleric</option>
+                        <option value="Druid">Druid</option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Monk">Monk</option>
+                        <option value="Paladin">Paladin</option>
+                        <option value="Ranger">Ranger</option>
+                        <option value="Rogue">Rogue</option>
+                        <option value="Sorcerer">Sorcerer</option>
+                        <option value="Warlock">Warlock</option>
+                        <option value="Wizard">Wizard</option>
+                </select>   
+
+            </label>
+        </div>
+
+        <div class="col-2">
+
+            <label for="ChracterRace">Race
+                <select class="CharacterRace" id="CharacterRace">
+                        <option value="---" selected="selected">---</option>    
+                        <option value="Dragonborn">Dragonborn</option>
+                        <option value="Dwarf">Dwarf</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Gnome">Gnome</option>
+                        <option value="Half Elf">Half Elf</option>
+                        <option value="Half Orc">Half Orc</option>
+                        <option value="Halfling">Halfling</option>
+                        <option value="Human">Human</option>
+                        <option value="Tiefling">Tiefling</option>
+                </select>   
+            </label>
+
+            <label for="ChracterSubrace" id="CharacterSubrace">Subrace
+                    <select class="CharacterSubrace" id="CharacterSubrace_Dwarf" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Duergar">Duergar</option>
+                            <option value="Hill">Hill</option>
+                            <option value="Mountain">Mountain</option>
+                    </select>
+                    <select class="CharacterSubrace" id="CharacterSubrace_Elf" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Dark">Dark</option>
+                            <option value="High">High</option>
+                            <option value="Wood">Wood</option>
+                    </select>
+                    <select class="CharacterSubrace" id="CharacterSubrace_Gnome" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Forest">Forest</option>
+                            <option value="Rock">Rock</option>
+                    </select>
+                    <select class="CharacterSubrace" id="CharacterSubrace_Halfling" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Lightfoot">Lightfoot</option>
+                            <option value="Stout">Stout</option>
+                    </select>        
+            </label>
+            <label for="CharacterAncestry" id="CharacterAncestry" style="display: none;">Ancestry
+                    <select class="CharacterAncestry" id="CharacterAncestry_Dragonborn" style="display:none;">
+                            <option value="---" selected="selected">---</option>    
+                            <option value="Black">Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Brass">Brass</option>
+                            <option value="Bronze">Bronze</option>
+                            <option value="Copper">Copper</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                            <option value="Silver">Silver</option>
+                            <option value="White">White</option>
+                    </select>
+            </label>
+        </div>
+
+        <div class="col-8"></div>
+
+    </div>
+    <!--End Row-->
+
+    <div class="row">
+
+        <div class="col-2">
+
+            <input type="number" name="ExperiencePoints" id="ExperiencePoints" value="0" min="0"> 
+            <br>
+            
+            <p><b>EXPERIENCE POINTS</b></p>
+
+        </div>
+
+    <div class="col-1"></div>
+
+        <div class="col-2">
+            
+            <label for="CharacterLevel">
+                <p id="CharacterLevel"> 1 </p>
+                <b>CHARACTER LEVEL</b>
+            </label>
+            <p id=CharacterLevelGlobal></p>
+
+        </div>
+
+    <div class="col-7"></div>
+       
+    </div>
+
+</div>
+<br>
+
+<!--Character Details - Middle-->
+
+
+    <div class="container">
+        
+        <div class="row">
+    
+            <div class="col-2">
+
+                    
+                <div class="jumbotron">
+
+               
+                    <div class="form-group static">
+
+                        <label for="Strength"><b>Strength</b></label>
+                        
+                        
+                            <select class="form-control_saving-throws" id="AbilityScoreStrength">
+                                <option value="Strength01">1</option>
+                                <option value="Strength02">2</option>
+                                <option value="Strength03">3</option>
+                                <option value="Strength04">4</option>
+                                <option value="Strength05">5</option>
+                                <option value="Strength06">6</option>
+                                <option value="Strength07">7</option>
+                                <option value="Strength08">8</option>
+                                <option value="Strength09">9</option>
+                                <option value="Strength10" selected="selected">10</option>
+                                <option value="Strength11">11</option>
+                                <option value="Strength12">12</option>
+                                <option value="Strength13">13</option>
+                                <option value="Strength14">14</option>
+                                <option value="Strength15">15</option>
+                                <option value="Strength16">16</option>
+                                <option value="Strength17">17</option>
+                                <option value="Strength18">18</option>
+                                <option value="Strength19">19</option>
+                                <option value="Strength20">20</option>
+                            </select>
+                            <p id="AbilityScoreModifierStrength">0</p>
+
+                        
+                  
+                    </div>
+
+                    <div class="form-group static">
+                    <label for="Dexterity"><b>Dexterity</b></label>
+                    <select class="form-control_saving-throws" id="AbilityScoreDexterity">
+                        <option value="Dexterity01">1</option>
+                        <option value="Dexterity02">2</option>
+                        <option value="Dexterity03">3</option>
+                        <option value="Dexterity04">4</option>
+                        <option value="Dexterity05">5</option>
+                        <option value="Dexterity06">6</option>
+                        <option value="Dexterity07">7</option>
+                        <option value="Dexterity08">8</option>
+                        <option value="Dexterity09">9</option>
+                        <option value="Dexterity10" selected="selected">10</option>
+                        <option value="Dexterity11">11</option>
+                        <option value="Dexterity12">12</option>
+                        <option value="Dexterity13">13</option>
+                        <option value="Dexterity14">14</option>
+                        <option value="Dexterity15">15</option>
+                        <option value="Dexterity16">16</option>
+                        <option value="Dexterity17">17</option>
+                        <option value="Dexterity18">18</option>
+                        <option value="Dexterity19">19</option>
+                        <option value="Dexterity20">20</option>
+                    </select>
+                    </div>
+                    <p id="AbilityScoreModifierDexterity">0</p>
+
+                    <div class="form-group static">
+                    <label for="Constitution"><b>Constitution</b></label>
+                    <select class="form-control_saving-throws" id="AbilityScoreConstitution">
+                        <option value="Constitution01" >1</option>
+                        <option value="Constitution02">2</option>
+                        <option value="Constitution03">3</option>
+                        <option value="Constitution04">4</option>
+                        <option value="Constitution05">5</option>
+                        <option value="Constitution06">6</option>
+                        <option value="Constitution07">7</option>
+                        <option value="Constitution08">8</option>
+                        <option value="Constitution09">9</option>
+                        <option value="Constitution10" selected="selected">10</option>
+                        <option value="Constitution11">11</option>
+                        <option value="Constitution12">12</option>
+                        <option value="Constitution13">13</option>
+                        <option value="Constitution14">14</option>
+                        <option value="Constitution15">15</option>
+                        <option value="Constitution16">16</option>
+                        <option value="Constitution17">17</option>
+                        <option value="Constitution18">18</option>
+                        <option value="Constitution19">19</option>
+                        <option value="Constitution20">20</option>
+                    </select>
+                    </div>
+                    <p id="AbilityScoreModifierConstitution">0</p>
+
+                    <div class="form-group static">
+                    <label for="Intelligence"><b>Intelligence</b></label>
+                    <select class="form-control_saving-throws" id="AbilityScoreIntelligence">
+                        <option value="Intelligence01" >1</option>
+                        <option value="Intelligence02">2</option>
+                        <option value="Intelligence03">3</option>
+                        <option value="Intelligence04">4</option>
+                        <option value="Intelligence05">5</option>
+                        <option value="Intelligence06">6</option>
+                        <option value="Intelligence07">7</option>
+                        <option value="Intelligence08">8</option>
+                        <option value="Intelligence09">9</option>
+                        <option value="Intelligence10" selected="selected">10</option>
+                        <option value="Intelligence11">11</option>
+                        <option value="Intelligence12">12</option>
+                        <option value="Intelligence13">13</option>
+                        <option value="Intelligence14">14</option>
+                        <option value="Intelligence15">15</option>
+                        <option value="Intelligence16">16</option>
+                        <option value="Intelligence17">17</option>
+                        <option value="Intelligence18">18</option>
+                        <option value="Intelligence19">19</option>
+                        <option value="Intelligence20">20</option>
+                    </select>
+                    </div>
+                    <p id="AbilityScoreModifierIntelligence">0</p>
+
+                    <div class="form-group static">
+                    <label for="Wisdom"><b>Wisdom</b></label>
+                    <select class="form-control_saving-throws" id="AbilityScoreWisdom">
+                        <option value="Wisdom01" >1</option>
+                        <option value="Wisdom02">2</option>
+                        <option value="Wisdom03">3</option>
+                        <option value="Wisdom04">4</option>
+                        <option value="Wisdom05">5</option>
+                        <option value="Wisdom06">6</option>
+                        <option value="Wisdom07">7</option>
+                        <option value="Wisdom08">8</option>
+                        <option value="Wisdom09">9</option>
+                        <option value="Wisdom10" selected="selected">10</option>
+                        <option value="Wisdom11">11</option>
+                        <option value="Wisdom12">12</option>
+                        <option value="Wisdom13">13</option>
+                        <option value="Wisdom14">14</option>
+                        <option value="Wisdom15">15</option>
+                        <option value="Wisdom16">16</option>
+                        <option value="Wisdom17">17</option>
+                        <option value="Wisdom18">18</option>
+                        <option value="Wisdom19">19</option>
+                        <option value="Wisdom20">20</option>
+                      </select>
+                      <p id="AbilityScoreModifierWisdom">0</p>
+                      
+                    </div>
+
+                    <div class="form-group static">
+                        <label for="Charisma"><b>Charisma</b></label>
+                        <select class="form-control_saving-throws" id="AbilityScoreCharisma">
+                        <option value="Charisma01">1</option>
+                        <option value="Charisma02">2</option>
+                        <option value="Charisma03">3</option>
+                        <option value="Charisma04">4</option>
+                        <option value="Charisma05">5</option>
+                        <option value="Charisma06">6</option>
+                        <option value="Charisma07">7</option>
+                        <option value="Charisma08">8</option>
+                        <option value="Charisma09">9</option>
+                        <option value="Charisma10" selected="selected">10</option>
+                        <option value="Charisma11">11</option>
+                        <option value="Charisma12">12</option>
+                        <option value="Charisma13">13</option>
+                        <option value="Charisma14">14</option>
+                        <option value="Charisma15">15</option>
+                        <option value="Charisma16">16</option>
+                        <option value="Charisma17">17</option>
+                        <option value="Charisma18">18</option>
+                        <option value="Charisma19">19</option>
+                        <option value="Charisma20">20</option>
+                    </select>
+                    <p id="AbilityScoreModifierCharisma">0</p>
+
+                    </div>
+                
+                </div> <!--JumboTron-->
+            </div>
+           
+   
+
+  
+               
+
+            <!--2. Column-->
+            <div class="col-4">
+
+                <div class="container">
+                            <label for="ProficencyBonus">
+                                <p id="ProficencyBonus"> 2 </p> <b>PROFICENCY BONUS</b>
+                            </label>
+                </div>
+
+                <br>
+                <br>
+
+                <!--Saving Throws-->
+                <div class="container">
+                    <div class="checkbox">
+                        <label for="checkbox">    
+                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowStrength"> Strength
+                        </label> 
+                        <p id="SavingThrowStrength">0</p>
+                    </div>
+                        
+                    <div class="checkbox">
+                         <label for="checkbox">    
+                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowDexterity"> Dexterity
+                        </label> 
+                        <p id="SavingThrowDexterity">0</p>
+                    </div>
+
+                    <div class="checkbox">
+                        <label for="checkbox">    
+                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow"id="CheckboxSavingThrowConstitution"> Constitution
+                        </label> 
+                        <p id="SavingThrowConstitution">0</p>
+                    </div>
+
+                    <div class="checkbox">
+                        <label for="checkbox">    
+                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowIntelligence"> Intelligence
+                        </label> 
+                        <p id="SavingThrowIntelligence">0</p>
+                    </div>
+
+                    <div class="checkbox">
+                        <label for="checkbox">    
+                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowWisdom"> Wisdom
+                        </label> 
+                        <p id="SavingThrowWisdom">0</p>
+                        </div>
+
+                    <div class="checkbox">
+                        <label for="checkbox">    
+                            <input class="checkbox" type="checkbox" name="SavingThrow" value="SavingThrow" id="CheckboxSavingThrowCharisma"> Charisma
+                        </label> 
+                        <p id="SavingThrowCharisma">0</p>
+                    </div>
+
+                        <p><b> SAVING THROWS</b></p>
+                       
+                    </div> 
+                    <!--Saving Throws Container-->
+<br>
+<br>
+                    <!--Skills-->
+                    <div class="container">
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsAcrobatics"> Acrobatics 
+                            </label> 
+                            <p id="SkillsAcrobatics">0</p>
+                        </div>
+
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsAnimalHandling"> Animal Handling 
+                            </label> 
+                            <p id="SkillsAnimalHandling">0</p>
+                        </div>
+
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsArcana"> Arcana 
+                            </label> 
+                            <p id="SkillsArcana">0</p>
+                        </div>
+
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsAthletics"> Athletics 
+                            </label> 
+                               <p id="SkillsAthletics">0</p>
+                        </div>
+
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsDeception"> Deception 
+                            </label> 
+                            <p id="SkillsDeception">0</p>
+                        </div>
+                    
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                    <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsHistory"> History 
+                            </label> 
+                            <p id="SkillsHistory">0</p>
+                        </div>
+
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                    <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsInsight"> Insight 
+                            </label> 
+                            <p id="SkillsInsight">0</p>
+                        </div>
+
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsIntimidation"> Intimidation 
+                            </label> 
+                            <p id="SkillsIntimidation">0</p>
+                        </div>                        
+
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsInvestigation"> Investigation 
+                            </label> 
+                            <p id="SkillsInvestigation">0</p>
+                        </div>                        
+    
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsMedicine"> Medicine 
+                            </label> 
+                            <p id="SkillsMedicine">0</p>
+                        </div>
+ 
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsNature"> Nature 
+                            </label> 
+                            <p id="SkillsNature">0</p>
+                        </div>
+       
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsPerception"> Perception 
+                            </label> 
+                            <p id="SkillsPerception">0</p>
+                        </div>
+    
+                        <div class="checkbox">
+                            <label for="checkbox">    
+                                    <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsPerformance"> Performance 
+                            </label> 
+                            <p id="SkillsPerformance">0</p>
+                        </div>
+        
+                        <div class="checkbox">
+                                <label for="checkbox">    
+                                        <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsPersuasion"> Persuasion 
+                                </label> 
+                                <p id="SkillsPersuasion">0</p>
+                        </div>
+    
+                        <div class="checkbox">
+                                <label for="checkbox">    
+                                        <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsReligion"> Religion 
+                                </label> 
+                                <p id="SkillsReligion">0</p>
+                        </div>
+    
+                        <div class="checkbox">
+                                <label for="checkbox">    
+                                        <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsSleightofHand"> Sleight of Hand 
+                                </label> 
+                                <p id="SkillsSleightofHand">0</p>
+                        </div>
+    
+                        <div class="checkbox">
+                                <label for="checkbox">    
+                                        <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsStealth"> Stealth 
+                                </label> 
+                                <p id="SkillsStealth">0</p>
+                        </div>
+    
+                        <div class="checkbox">
+                                <label for="checkbox">    
+                                        <input class="checkbox" type="checkbox" name="Skills" value="Skills" id="CheckboxSkillsSurvival"> Survival 
+                                </label> 
+                                <p id="SkillsSurvival">0</p>
+                        </div>
+
+                        <p><b> SKILLS </b></p>
+                    </div> 
+                    <!--Skills Container-->
+            </div>
+            <!--End 2. Column-->
+
+            <div class="col-6"></div>
+           
+
+
+
+
+        </div>
+        <!--End Row-->
+    </div>
+    <!--End Container-->
+
+
+
+
+    
+
+
+<!--JavaScript Java Script-->
+    <script src="JavaScript_CharacterSheet\CharacterSheet.js"></script>
+    <script src="JavaScript_CharacterSheet\Character_Subrace.js"></script>
+    <script src="JavaScript_CharacterSheet\Experience to Level to Proficency Bonus.js"></script>
+    <script src="JavaScript_CharacterSheet\Ability Score Modifier.js"></script>
+    <script src="JavaScript_CharacterSheet\Saving Throws Button Checkbox.js"></script>
+    <script src="JavaScript_CharacterSheet\Character_Sheet-Saving_Throw.js"></script>
+    <script src="JavaScript_CharacterSheet\Skills Modifier.js"></script> 
+
+
+
+</body>
+</html>
