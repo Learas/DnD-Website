@@ -1,4 +1,4 @@
-// start 02.02.2019
+// Working 02.02.2019 
 
 document.getElementById('CharacterRace').addEventListener('input', getSubrace);
 
@@ -14,8 +14,8 @@ function getSubrace() {
 
     if (Race.options[Race.selectedIndex].value === 'Dragonborn' && Dragonborn.style.display === 'none') {
         Subrace.style.display = 'none';
-        Ancestry.style.display = 'block'; 
-        Dragonborn.style.display = 'block';
+        Ancestry.style.display = 'inline-block'; 
+        Dragonborn.style.display = 'inline-block';
     } else {
         Subrace.style.display = 'block';
         Ancestry.style.display = 'none'; 
@@ -23,25 +23,25 @@ function getSubrace() {
     }
    
     if (Race.options[Race.selectedIndex].value === 'Dwarf' && Dwarf.style.display === 'none') {
-        Dwarf.style.display = 'block';
+        Dwarf.style.display = 'inline-block';
     } else {
         Dwarf.style.display = 'none';
     }
 
     if (Race.options[Race.selectedIndex].value === 'Elf' && Elf.style.display === 'none') {
-        Elf.style.display = 'block';
+        Elf.style.display = 'inline-block';
     } else {
         Elf.style.display = 'none';
     }
 
     if (Race.options[Race.selectedIndex].value === 'Gnome' && Gnome.style.display === 'none') {
-        Gnome.style.display = 'block';
+        Gnome.style.display = 'inline-block';
     } else {
         Gnome.style.display = 'none';
     }
 
     if (Race.options[Race.selectedIndex].value === 'Halfling' && Halfling.style.display === 'none') {
-        Halfling.style.display = 'block';
+        Halfling.style.display = 'inline-block';
     } else {
         Halfling.style.display = 'none';
     }

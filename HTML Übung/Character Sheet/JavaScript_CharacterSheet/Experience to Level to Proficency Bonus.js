@@ -5,7 +5,7 @@ document.getElementById('ExperiencePoints').addEventListener('input', ChangeExpe
 
 
 // Experience to Level
-CharacterLevel = 20;
+CharacterLevel = 1;
 ProficencyBonus = 2;
 
 document.getElementById('CharacterExperience').innerHTML = CharacterLevel;
@@ -115,6 +115,7 @@ function ChangeExperience() {
     // other JavaScript / Java Script functions
     getSavingThrow.apply(ProficencyBonus);
     getSkills.apply(ProficencyBonus);
+    getHitPoints.apply(CharacterLevel);
 }
 
 
