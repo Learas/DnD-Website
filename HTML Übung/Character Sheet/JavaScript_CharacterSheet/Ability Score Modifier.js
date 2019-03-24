@@ -1,3 +1,5 @@
+// working
+
 document.getElementById('AbilityScoreStrength').addEventListener('input', getAbilityScoreModifier);
 document.getElementById('AbilityScoreDexterity').addEventListener('input', getAbilityScoreModifier);
 document.getElementById('AbilityScoreConstitution').addEventListener('input', getAbilityScoreModifier);
@@ -90,8 +92,11 @@ function getAbilityScoreModifier() {
     document.getElementById('AbilityScoreModifierWisdom').innerHTML = getAbilityScoreModifierWisdom();
     document.getElementById('AbilityScoreModifierCharisma').innerHTML = getAbilityScoreModifierCharisma();
 
+    document.getElementById('Initiative').innerHTML = getAbilityScoreModifierDexterity();
 
     // other JavaScript / Java Script functions
     getSavingThrow.apply(AbilityScoreModifierStrength, AbilityScoreModifierDexterity, AbilityScoreModifierConstitution, AbilityScoreModifierIntelligence, AbilityScoreModifierWisdom, AbilityScoreModifierCharisma);
     getSkills.apply(AbilityScoreModifierStrength, AbilityScoreModifierDexterity, AbilityScoreModifierConstitution, AbilityScoreModifierIntelligence, AbilityScoreModifierWisdom, AbilityScoreModifierCharisma);
+    getArmorClass.apply(AbilityScoreModifierDexterity, AbilityScoreModifierConstitution);
+    getInitiative.apply(AbilityScoreModifierDexterity);
 }
