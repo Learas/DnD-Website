@@ -26,14 +26,15 @@
     <title>Character Sheet</title>
     <link rel="stylesheet" href="HTML Übung\Character Sheet\Styles-Character_Sheet.css"> 
    <!--Character_Sheet_new-Dateien/Styles-Character_Sheet.css - vorheriges .css -->
+   
 </head>
 <body>
 <br>
 
 
 <!--Character Details - Heading-->
-<div class="container">
-    <div class="row" style="margin-bottom: 10px">
+<div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; padding-top: 10px; padding-bottom: -5px; margin-bottom: 10px;">
+    <div class="row" style="margin-bottom: 10px;">
 
         <div class="col-2">
             <label for="CharacterClass">Class 
@@ -123,7 +124,7 @@
         </div>
 
         <div class="col-2">
-                <label for="CharacterBackground" id="CharacterBackground"> 
+                <label for="CharacterBackground"> 
                         <select class="CharacterBackground" id="CharacterBackground">
                                 <option value="---" selected="selected">---</option>    
                                 <option value="Acolyte">Acolyte</option>
@@ -196,7 +197,7 @@
                     
                 <div class="jumbotron" style="text-align:center; padding-top: 2em; padding-bottom: 1em; padding-left: 1.5em; padding-right: 1.5em;">
          
-                    <div class="form-group static" style="border-style:solid; border-width: 2px; border-radius: 25px; padding-top:10px; background-color: whitesmoke">
+                    <div class="form-group static" style="border-style: solid; border-width: 2px; border-radius: 25px; padding-top: 10px; background-color: whitesmoke">
 
                         <label for="Strength"> <b>Strength</b></label>
                                                 
@@ -444,7 +445,7 @@
 <br>
 
                     <!--Skills-->
-                    <div class="container" style="border-style:solid; border-radius: 25px; padding-top:5px; patting-bottom: 5px">
+                    <div class="container" style="border-style:solid; border-radius: 25px; padding-top:5px; padding-bottom: 5px">
                             <p style="text-align:center"><b> SKILLS </b></p>
                         <div class="checkbox">
                             <label for="checkbox">    
@@ -631,12 +632,79 @@
                 </div>
             </div>
             <!--End 3. Colum-->
-            <div class="col-2">
+            <div class="col-2" style="padding-bottom: -15px;">
                 <div class="row">
 
-                    <p>Hello World</p>
+
+
+                <div class="container" style="border-style:solid; border-radius: 25px; padding-top: 20px; padding-bottom: 5px;  margin-left: -30px;">
+
+
+
+                    <label for="PersonalityTrait" id="PersonalityTrait"> Personality Trait
+                        <select class="PersonalityTrait" id="PersonalityTrait_Acolyte" style="display:none; text-overflow: ellipsis; max-Width: 20%;">
+                                <option value="---" selected="selected">---</option>    
+                                <option value="PersonalityTrait_Acolyte1">I idolize a particular hero of my faith, and constantly refer to that peron's dees and example.</option>
+                                <option value="PersonalityTrait_Acolyte2">I can find common ground ebtween the fiercest enemies, empathizing with them and always working toward peace.</option>
+                                <option value="PersonalityTrait_Acolyte3">I see omens in every event and action. The gods try to speak to us, we just need to lsiten.</option>
+                                <option value="PersonalityTrait_Acolyte4">Nothing can shake my optimistic attitude. </option>
+                                <option value="PersonalityTrait_Acolyte5">I quote (or misquote) sacred texts and proverbs in almost every situation.</option>
+                                <option value="PersonalityTrait_Acolyte6">I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods.</option>
+                                <option value="PersonalityTrait_Acolyte7">I've enjoyed fine food, drink, and high society among my temple's elite. Rough living grates on me.</option>
+                                <option value="PersonalityTrait_Acolyte8">I've spent so long in the temple that I have little practicle experience dealing with people in the outside world.</option>
+                        </select>       
+                </label>
+
+<br>
+                    <label for="Ideal" id="Ideal"> Ideal
+                        <select class="Ideal" id="Ideal_None">
+                                <option value="---" selected="selected">---</option>    
+                        </select>
+                        <select class="Ideal" id="Ideal_Acolyte" style="display:none;">
+                                <option value="---" selected="selected">---</option>    
+                                <option value="Ideal_Acolyte1"> <b>Tradition.</b> The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful) </option>
+                                <option value="Ideal_Acolyte2"> <b>Charity.</b> I always try to help those in need, no matter what the personal cost. (Good) </option>
+                                <option value="Ideal_Acolyte3"> <b>Change.</b> We must help bring about the changes the gods are constantly working in the world. (Chaotic)</option>
+                                <option value="Ideal_Acolyte4"> <b>Power.</b> I hope to one day rise to the top of my faith's religious hierarchy. (Lawful)</option>
+                                <option value="Ideal_Acolyte5"> <b>Faith.</b> I trust that my deity will guide my actions. I have faith that if I work hard, things will go well. (Lawful)</option>
+                                <option value="Ideal_Acolyte6"> <b>Aspiration.</b> I seek to prove myself worthy of my god'S facor by matching my actions against his or her teachings. (Any)</option>
+                        </select>
+<br>
+                    <label for="Bond" id="Bond"> Bond
+                        <select class="Bond" id="BondNone">
+                                    <option value="---" selected="selected">---</option>    
+                        </select>
+                            <select class="Bond" id="Bond_Acolyte" style="display:none;">
+                                    <option value="---" selected="selected">---</option>    
+                                    <option value="Bond_Acolyte1"> I would die to recover an ancient relic of my faith that was lost long ago. </option>
+                                    <option value="Bond_Acolyte2"> I will someday get revenge on the corrupt temple hierarchy who branded me a heretic.</option>
+                                    <option value="Bond_Acolyte3"> I owe my life to the priest who took me in when my parents died.</option>
+                                    <option value="Bond_Acolyte4"> Everything I do is for the common people.</option>
+                                    <option value="Bond_Acolyte5"> I will do anything to protect the temple where I served.</option>
+                                    <option value="Bond_Acolyte6"> I seek to preserve a sacred text that my enemies consider heretical and seek to destroy.</option>
+                            </select>          
+                    </label>
+<br>
+                    <label for="Flaw" id="Flaw"> Flaw
+                        <select class="Flaw" id="FlawNone">
+                                    <option value="---" selected="selected">---</option>    
+                        </select>
+                            <select class="Flaw" id="Flaw_Acolyte" style="display:none;">
+                                    <option value="---" selected="selected">---</option>    
+                                    <option value="Flaw_Acolyte1"> I judge others harshsly, and myself even more severely. </option>
+                                    <option value="Flaw_Acolyte2"> I put too much trust in those who wield power within my temple's hierarchy.</option>
+                                    <option value="Flaw_Acolyte3"> My piety sometimes elads me to blindly trust those that profess faith in my god.</option>
+                                    <option value="Flaw_Acolyte4"> I am inflexible in my thinking.</option>
+                                    <option value="Flaw_Acolyte5"> I am suspicious of strangers and expect the worst of them.</option>
+                                    <option value="Flaw_Acolyte6"> Once i pick a goal, I become obsessed with it to the detriment of everything else in my life.</option>
+                            </select>          
+                    </label>
                 </div>
+                <!--End Container-->
+                </div>
+                <!--End Row-->
             </div>
+            <!--End 4. Colum-->
            
 
 
@@ -657,6 +725,7 @@
     <script src="JavaScript_CharacterSheet\CharacterSheet.js"></script>
     <script src="JavaScript_CharacterSheet\Information Classes.js"></script>
     <script src="JavaScript_CharacterSheet\Choose Character_Subrace.js"></script>
+    <script src="JavaScript_CharacterSheet\Choose Character Background Traits.js"></script>
     <script src="JavaScript_CharacterSheet\Experience to Level to Proficency Bonus.js"></script>
     <script src="JavaScript_CharacterSheet\Ability Score Modifier.js"></script>
     <script src="JavaScript_CharacterSheet\Saving Throws Button Checkbox.js"></script>
