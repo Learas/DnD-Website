@@ -224,7 +224,7 @@
                                 <option value="Strength20">20</option>
                             </select>
                             <br>
-                            <p id="AbilityScoreModifierStrength">0</p>
+                            <p id="AbilityScoreModifierStrength" style="margin-top: 8px; margin-bottom: 10px;">0</p>
                     </div>
 
                     <div class="form-group static" style="border-style:solid; border-width: 2px; border-radius: 25px; padding-top:10px; background-color: whitesmoke">
@@ -252,7 +252,7 @@
                             <option value="Dexterity19">19</option>
                             <option value="Dexterity20">20</option>
                         </select>
-                        <p id="AbilityScoreModifierDexterity">0</p>
+                        <p id="AbilityScoreModifierDexterity" style="margin-top: 8px; margin-bottom: 10px;">0</p>
                     </div>
 
                     <div class="form-group static" style="border-style:solid; border-width: 2px; border-radius: 25px; padding-top:10px; background-color: whitesmoke">
@@ -279,7 +279,7 @@
                             <option value="Constitution19">19</option>
                             <option value="Constitution20">20</option>
                     </select>
-                    <p id="AbilityScoreModifierConstitution">0</p>
+                    <p id="AbilityScoreModifierConstitution" style="margin-top: 8px; margin-bottom: 10px;">0</p>
                     </div>
 
                     <div class="form-group static" style="border-style:solid; border-width: 2px; border-radius: 25px; padding-top:10px; background-color: whitesmoke">
@@ -306,7 +306,7 @@
                             <option value="Intelligence19">19</option>
                             <option value="Intelligence20">20</option>
                         </select>
-                        <p id="AbilityScoreModifierIntelligence">0</p>
+                        <p id="AbilityScoreModifierIntelligence" style="margin-top: 8px; margin-bottom: 10px;">0</p>
                     </div>
 
                     <div class="form-group static" style="border-style:solid; border-width: 2px; border-radius: 25px; padding-top:10px; background-color: whitesmoke">
@@ -333,7 +333,7 @@
                             <option value="Wisdom19">19</option>
                             <option value="Wisdom20">20</option>
                           </select>
-                          <p id="AbilityScoreModifierWisdom">0</p>                      
+                          <p id="AbilityScoreModifierWisdom" style="margin-top: 8px; margin-bottom: 10px;">0</p>                      
                     </div>
 
                     <div class="form-group static" style="border-style:solid; border-width: 2px; border-radius: 25px; padding-top:10px; background-color: whitesmoke">
@@ -360,7 +360,7 @@
                             <option value="Charisma19">19</option>
                             <option value="Charisma20">20</option>
                         </select>
-                        <p id="AbilityScoreModifierCharisma">0</p>
+                        <p id="AbilityScoreModifierCharisma" style="margin-top: 8px; margin-bottom: 10px;">0</p>
                     </div>
                 
                 </div> <!--JumboTron-->
@@ -637,30 +637,33 @@
 
 
 
-                <div class="container" style="border-style:solid; border-radius: 25px; padding-top: 20px; padding-bottom: 5px;  margin-left: -30px;">
+                <div class="container" style="border-style:solid; border-radius: 25px; padding-top: 20px; padding-bottom: 5px;  margin-left: -30px; padding-right: 275px;">
 
 
 
-                    <label for="PersonalityTrait" id="PersonalityTrait"> Personality Trait
-                        <select class="PersonalityTrait" id="PersonalityTrait_Acolyte" style="display:none; text-overflow: ellipsis; max-Width: 20%;">
+                    <label for="PersonalityTrait" id="PersonalityTrait" style ="width: 150px"> Personality Trait
+                            <select class="PersonalityTrait" id="PersonalityTraitNone" style="display: block;">
+                                    <option value="---" selected="selected">---</option>    
+                        </select>
+                        <select class="PersonalityTrait" id="PersonalityTrait_Acolyte" style="display:none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-Width: 17em;">
                                 <option value="---" selected="selected">---</option>    
                                 <option value="PersonalityTrait_Acolyte1">I idolize a particular hero of my faith, and constantly refer to that peron's dees and example.</option>
-                                <option value="PersonalityTrait_Acolyte2">I can find common ground ebtween the fiercest enemies, empathizing with them and always working toward peace.</option>
+                                <option value="PersonalityTrait_Acolyte2">I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.</option>
                                 <option value="PersonalityTrait_Acolyte3">I see omens in every event and action. The gods try to speak to us, we just need to lsiten.</option>
                                 <option value="PersonalityTrait_Acolyte4">Nothing can shake my optimistic attitude. </option>
                                 <option value="PersonalityTrait_Acolyte5">I quote (or misquote) sacred texts and proverbs in almost every situation.</option>
                                 <option value="PersonalityTrait_Acolyte6">I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods.</option>
                                 <option value="PersonalityTrait_Acolyte7">I've enjoyed fine food, drink, and high society among my temple's elite. Rough living grates on me.</option>
                                 <option value="PersonalityTrait_Acolyte8">I've spent so long in the temple that I have little practicle experience dealing with people in the outside world.</option>
-                        </select>       
+                        </select>
                 </label>
 
 <br>
                     <label for="Ideal" id="Ideal"> Ideal
-                        <select class="Ideal" id="Ideal_None">
-                                <option value="---" selected="selected">---</option>    
+                            <select class="Ideal" id="IdealNone" style="display: block;">
+                                    <option value="---" selected="selected">---</option>    
                         </select>
-                        <select class="Ideal" id="Ideal_Acolyte" style="display:none;">
+                        <select class="Ideal" id="Ideal_Acolyte" style="display:none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 17em;">
                                 <option value="---" selected="selected">---</option>    
                                 <option value="Ideal_Acolyte1"> <b>Tradition.</b> The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful) </option>
                                 <option value="Ideal_Acolyte2"> <b>Charity.</b> I always try to help those in need, no matter what the personal cost. (Good) </option>
@@ -671,10 +674,10 @@
                         </select>
 <br>
                     <label for="Bond" id="Bond"> Bond
-                        <select class="Bond" id="BondNone">
+                            <select class="Bond" id="BondNone" style="display: block;">
                                     <option value="---" selected="selected">---</option>    
                         </select>
-                            <select class="Bond" id="Bond_Acolyte" style="display:none;">
+                            <select class="Bond" id="Bond_Acolyte" style="display:none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 17em;">
                                     <option value="---" selected="selected">---</option>    
                                     <option value="Bond_Acolyte1"> I would die to recover an ancient relic of my faith that was lost long ago. </option>
                                     <option value="Bond_Acolyte2"> I will someday get revenge on the corrupt temple hierarchy who branded me a heretic.</option>
@@ -686,10 +689,10 @@
                     </label>
 <br>
                     <label for="Flaw" id="Flaw"> Flaw
-                        <select class="Flaw" id="FlawNone">
+                        <select class="Flaw" id="FlawNone" style="display: block;">
                                     <option value="---" selected="selected">---</option>    
                         </select>
-                            <select class="Flaw" id="Flaw_Acolyte" style="display:none;">
+                            <select class="Flaw" id="Flaw_Acolyte" style="display:none; white-space: nowrap; text-overflow: ellipsis; max-width: 17em;">
                                     <option value="---" selected="selected">---</option>    
                                     <option value="Flaw_Acolyte1"> I judge others harshsly, and myself even more severely. </option>
                                     <option value="Flaw_Acolyte2"> I put too much trust in those who wield power within my temple's hierarchy.</option>
